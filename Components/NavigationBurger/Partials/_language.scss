@@ -1,0 +1,33 @@
+.trp-language-switcher {
+  div {
+    background-color: transparent;
+    background-image: linear-gradient(45deg, transparent 50%, $black 50%), linear-gradient(135deg, $black 50%, transparent 50%);
+    background-position: calc(100% - 8px) calc(1em + 0px), calc(100% - 3px) calc(1em + 0px);
+    background-repeat: no-repeat;
+    background-size: 5px 5px, 5px 5px;
+    border: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding: 3px 20px 3px 5px;
+
+    a {
+      color: $black;
+      font-weight: 800;
+      opacity: 0.5;
+    }
+
+    .trp-ls-shortcode-disabled-language {
+      opacity: 1;
+    }
+  }
+
+  // .trp-ls-shortcode-current-language {
+  //   display: flex !important;
+  // }
+
+  .trp-ls-shortcode-language {
+    display: flex !important;
+    overflow: visible;
+    visibility: visible;
+  }
+}

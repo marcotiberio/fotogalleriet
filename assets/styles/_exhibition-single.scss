@@ -1,0 +1,74 @@
+/* Custom styling for exhibition posts */
+
+.single-exhibition {
+  .post {
+    &-main {
+      display: flex;
+      flex-flow: column wrap;
+
+      .flyntComponent--sliderBanner {
+        order: -1;
+      }
+      
+      .exhibition-meta {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        font-weight: bold;
+        justify-content: space-between;
+        text-transform: uppercase;
+        width: 100%;
+
+        &::after {
+          border-bottom: 2px solid $black;
+          content: '';
+          display: block;
+          margin: 10px auto 0;
+          width: calc(100vw - 40px);
+        }
+
+        .info {
+          align-items: center;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          width: 50%;
+        }
+      }
+    
+      .componentSpacing {
+        margin: $component-spacing-mobile/2 0;
+        padding: 0 $padding-mobile;
+  
+        @media (min-width: $breakpoint-tablet) {
+          margin: $component-spacing-desktop/2 0;
+          padding: 0 $padding-mobile;
+        }
+  
+        @media (min-width: $breakpoint-desktop) {
+          margin: $component-spacing-desktop/2 0;
+          padding: 0 $padding-desktop;
+        }
+  
+        &[class*='theme'] {
+          margin: 0;
+          padding: $component-spacing-mobile/2 0;
+  
+          @media (min-width: $breakpoint-tablet) {
+            padding: $component-spacing-desktop/2 0;
+          }
+  
+          @media (min-width: $breakpoint-desktop) {
+            padding: $component-spacing-desktop/2 0;
+          }
+        }
+      }
+  
+      > .componentSpacing {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

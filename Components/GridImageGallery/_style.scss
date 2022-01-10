@@ -1,0 +1,18 @@
+[is='flynt-grid-image-gallery'] {
+  .figure {
+    margin: 0;
+  }
+
+  .gallery {
+    column-gap: $padding-desktop;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: $padding-desktop;
+
+    &-image {
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        width: 100%;
+      }
+    }
+  }
+}

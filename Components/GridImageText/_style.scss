@@ -1,0 +1,31 @@
+[is='flynt-grid-image-text'] {
+  .grid {
+    @include reset-list;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      grid-auto-rows: auto;
+      grid-template-columns: 1fr;
+    }
+
+    &-item {
+      padding: $gap 0 0 $gap;
+      width: 100%;
+    }    
+  }
+
+  .content {
+    height: 100%;
+
+    &-inner {
+      @include reset-content-margins;
+
+      &:not(.boxPadding) {
+        padding: $gap 0;
+      }
+    }
+  }
+}

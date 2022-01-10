@@ -1,0 +1,12 @@
+<div class="flyntComponent boxPadding" style="background-color: {{ backgroundColor }}" is="flynt-block-wysiwyg-two-col">
+  <div class="container container--fullWidth">
+    <div class="content content-left">
+      <div>{{ contentHtmlLeftTop|e('wp_kses_post') }}</div>
+      <div>{{ contentHtmlLeftBottom|e('wp_kses_post') }}</div>
+    </div>
+    <div class="content content-right">
+      <div>{{ contentHtmlRightTop|e('wp_kses_post') }}</div>
+      <div>{{ contentHtmlRightBottom|e('wp_kses_post') }}</div>
+    </div>
+  </div>
+</div>

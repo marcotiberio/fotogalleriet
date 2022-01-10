@@ -1,0 +1,140 @@
+[is='flynt-grid-posts-latest'] {
+  .preContent {
+    display: flex;
+    flex-flow: row wrap;
+
+    h4 {
+      margin-bottom: 0;
+      margin-right: $padding-mobile;
+      max-width: 20%;
+    }
+
+    .separator {
+      border-bottom: 1px solid $black;
+      flex-grow: 2;
+    }
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: ($gap * -1) 0 0 ($gap * -1);
+
+    &--columns2,
+    &--columns3,
+    &--columns4 {
+      .grid-item {
+        @media (min-width: $breakpoint-tablet) {
+          width: 50%;
+        }
+      }
+    }
+
+    &--columns3 {
+      .grid-item {
+        @media (min-width: $breakpoint-tablet-horizontal) {
+          width: 33.33%;
+        }
+      }
+    }
+
+    &--columns4 {
+      .grid-item {
+        /* ensure 2 columns stacking up until $breakpoint-desktop */
+        max-width: ($breakpoint-desktop - $padding-desktop * 2 + $gap) / 3 + 1;
+
+        @media (min-width: $breakpoint-desktop) {
+          width: 25%;
+        }
+      }
+    }
+  }
+
+  .grid-item {
+    max-width: 675px;
+    padding: $gap 0 0 $gap;
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+
+    &-image {
+      // background: $color-contrast;
+      flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
+      margin-top: $padding-mobile;
+    }
+
+    &-inner {
+      @include reset-content-margins;
+      color: $color-text;
+      flex-grow: 1;
+
+      #{$heading-selectors} {
+        color: $color-headline;
+      }
+
+      &-top {
+        border-bottom: 1px solid $black;
+        column-gap: 10%;
+        display: grid;
+        grid-template-columns: 70% 20%;
+
+        &--left {
+          display: flex;
+          flex-flow: column wrap;
+          padding-bottom: $padding-mobile / 2;
+        }
+
+        &--right {
+          align-content: center;
+          background-color: $black;
+          color: $white;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          text-align: center;
+
+          span {
+            line-height: 1.2;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      &-bottom {
+        padding-top: $padding-mobile / 2;
+
+        h4 {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      text-decoration: none;
+    }
+
+    &-footer {
+      align-items: center;
+      align-self: flex-end;
+      border-top: 1px solid $color-border;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      width: 100%;
+
+      @media (min-width: $breakpoint-tablet-horizontal) {
+        padding: 0 30px;
+      }
+    }
+  }
+}

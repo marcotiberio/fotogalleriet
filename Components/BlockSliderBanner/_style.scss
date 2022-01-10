@@ -1,0 +1,132 @@
+[is='flynt-block-slider-banner'] {
+  .title {
+    align-items: center;
+    background-color: $color-background;
+    border-bottom: 0;
+    border-left: 1px solid $color-border;
+    border-top: 1px solid $color-border;
+    display: flex;
+    height: calc(5vw - 1px);
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .slider {
+    background-color: $color-background;
+    height: 80vh;
+    position: relative;
+    width: 100%;
+
+    &-item {
+      width: 60%;
+      // float: left;
+      // height: 100%;
+      // min-height: 1px;
+      // height: 0;
+      // overflow: hidden;
+      // padding-bottom: 45%;
+      // position: relative;
+      // width: 50%;
+
+      .figure-image {
+        display: block;
+        height: 100%;
+        object-fit: contain;
+        width: 100%;
+        // height: 80vh;
+        // width: auto;
+        // height: 100%;
+        // margin: 0;
+        // object-fit: contain;
+        // width: auto;
+      }
+    }
+
+    &-button {
+      align-items: center;
+      background-color: transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity 0.2s ease-out;
+      width: 50%;
+      z-index: 10;
+
+      &.swiper-button-disabled {
+        cursor: not-allowed;
+        opacity: 0.2;
+        pointer-events: none;
+      }
+
+      &--prev {
+        left: 0;
+
+        // &:hover {
+        //   cursor: url('/wp-content/uploads/2021/09/arrow_left.svg'), auto;
+        // }
+      }
+
+      &--next {
+        right: 0;
+
+        // &:hover {
+        //   cursor: url('/wp-content/uploads/2021/09/arrow_right.svg'), auto;
+        // }
+      }
+
+      .feather {
+        color: $color-text;
+        height: auto;
+        top: 0;
+        width: 80%;
+      }
+    }
+  }
+
+  .figure {
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &-image {
+      height: 100%;
+      margin: 0;
+      object-fit: cover;
+      width: 100%;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        height: 100%;
+        margin: 0;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        height: 100%;
+        margin: 0;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    &-caption {
+      background: rgba($color-background-dark, 0.5);
+      bottom: 0;
+      color: $color-background-light;
+      display: inline-block;
+      font-size: 0.8rem;
+      max-width: 450px;
+      padding: 0.25rem 0.5rem;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  <article class="post">
+    <section class="post-main">
+      <h1 class="exhibition-title componentSpacing">{{ post.title }}</h1>
+      <div class="exhibition-meta componentSpacing">
+        <div class="artist">{{ post.subtitle }}</div>
+        <div class="info">
+          <span>{{ post.eventType }}</span>
+          <span>{{ post.when|date("d.m.Y") }}</span>
+          <span>{{ post.time|date("g:i") }}</span>
+        </div>
+        </div>
+      {% for component in post.meta('exhibitionComponents') %}
+        {{ renderComponent(component) }}
+      {% endfor %}
+    </section>
+    <section class="post-related">
+      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h3>' ~ __('Related Posts') ~ '</h3>','taxonomies': post.categories(), 'options': {'columns': 4}}) }}
+    </section>
+  </article>
+{% endblock %}

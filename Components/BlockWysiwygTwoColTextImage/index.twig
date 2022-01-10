@@ -1,0 +1,30 @@
+<div class="flyntComponent" style="background-color: {{ backgroundColor }}" is="flynt-block-wysiwyg-two-col-text-image">
+  <div class="container container--fullWidth">
+    <div class="content content-left boxPadding">
+      <div>{{ contentHtmlLeft|e('wp_kses_post') }}</div>
+    </div>
+    <div class="content content-right">
+      <div class="box-inner box-inner--image">
+        <figure class="figure">
+          {% if image.post_mime_type == 'image/svg+xml' %}
+            <img
+              class="image lazyload {{ alignImage }}"
+              src="{{ placeholderImage(500, (500 * 0.75)|round) }}"
+              data-src="{{ image.src }}"
+              alt="{{ image.alt|e }}">
+          {% else %}
+            <img class="figure-image lazyload {{ alignImage }}"
+              src="{{ image.src|resizeDynamic(500) }}"
+              srcset="{{ placeholderImage(500, 500 / image.aspect) }}"
+              data-srcset="{{ function('wp_get_attachment_image_srcset', image.id) }}"
+              data-sizes="auto"
+              alt="{{ image.alt|e }}">
+            {% endif %}
+          {% if image.caption %}
+            <figcaption class="figure-caption">{{ image.caption|e }}</figcaption>
+          {% endif %}
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>

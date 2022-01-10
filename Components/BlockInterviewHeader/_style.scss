@@ -1,0 +1,26 @@
+[is='flynt-block-interview-header'] {
+  .featuredImage {
+    .container {
+      padding: 0;
+      position: relative;
+
+      .figure {
+        max-width: 100%;
+
+        &-image {
+          height: calc(100vh - 75px);
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .content {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+}

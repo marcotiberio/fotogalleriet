@@ -1,0 +1,21 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  <article class="post">
+    <header class="post-header">
+      {{ renderComponent('BlockInterviewHeader', { post: post }) }}
+    </header>
+    <section class="post-main">
+      <div class="interview-meta componentSpacing">
+        <span>{{ post.eventType }}</span>
+        <span>{{ post.when|date("d.m.Y") }}</span>
+      </div>
+      {% for component in post.meta('interviewComponents') %}
+        {{ renderComponent(component) }}
+      {% endfor %}
+    </section>
+    <section class="post-related">
+      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h2>' ~ __('Related Posts') ~ '</h2>','taxonomies': post.categories(), 'options': {'theme': 'themeLight', 'columns': 3}}) }}
+    </section>
+  </article>
+{% endblock %}

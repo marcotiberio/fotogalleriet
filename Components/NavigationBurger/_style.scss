@@ -1,0 +1,70 @@
+// NOTE: overwriting wp defaults
+@media screen and (max-width: 600px) {
+  // stylelint-disable-next-line selector-max-id
+  #wpadminbar {
+    position: fixed;
+  }
+}
+
+[is='flynt-navigation-burger'] {
+  $navigation-height: 75px;
+
+  height: $navigation-height;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    display: block;
+  }
+
+  .container {
+    align-items: center;
+    background-color: $color-background;
+    // border-bottom: 1px solid $black;
+    display: flex;
+    height: $navigation-height;
+    justify-content: space-between;
+    left: 0;
+    padding: 15px $padding-desktop;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+
+    &-inner {
+      align-items: center;
+      display: flex;
+      flex-flow: row wrap;
+      width: 50%;
+
+      &--left {
+        justify-content: flex-start;
+
+        a {
+          margin-right: $padding-desktop * 2;
+        }
+      }
+
+      &--right {
+        justify-content: flex-end;
+
+        button {
+          margin-left: $padding-desktop * 2;
+        }
+      }
+    }
+
+    .admin-bar & {
+      top: 46px;
+
+      @media (min-width: 783px) {
+        top: 32px;
+      }
+    }
+  }
+
+  @import 'Partials/language';
+  @import 'Partials/logo';
+  @import 'Partials/search';
+  @import 'Partials/hamburger';
+  @import 'Partials/menu';
+}
