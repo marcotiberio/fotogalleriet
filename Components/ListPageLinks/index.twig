@@ -1,0 +1,24 @@
+<div class="flyntComponent componentSpacing" is="flynt-list-page-links">
+  <div class="container">
+    <div class="">
+      {% if preContentHtml or preContentTitle %}
+      <div class="preContent">
+        <div class="preContentTitle">
+          <h2>{{ preContentTitle }}</h2>
+          <div class="separator"></div>
+        </div>
+        <div>{{ preContentHtml|e('wp_kses_post') }}</div>
+      </div>
+      {% endif %}
+      {% if pageLinksRepeater %}
+        <ul class="pageLinksList">
+          {% for panel in pageLinksRepeater %}
+            <li>
+              <a class="pageLinksList-link h2" href="{{ panel.url }}" target="_blank" rel="noopener noreferrer">{{ panel.pageLinkTitle }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</div>

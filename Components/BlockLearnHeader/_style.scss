@@ -1,0 +1,29 @@
+[is='flynt-block-learn-header'] {
+  .featuredImage {
+    .container {
+      padding: 0;
+      position: relative;
+
+      .figure {
+        max-width: 100%;
+
+        &-image {
+          height: calc(100vh - 75px);
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .content {
+    bottom: $padding-desktop;
+    left: $padding-desktop;
+    max-width: 70%;
+    position: absolute;
+    text-align: left;
+
+    div {
+      color: $white;
+    }
+  }
+}

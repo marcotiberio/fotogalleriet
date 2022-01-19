@@ -1,6 +1,6 @@
 <?php
 
-namespace Flynt\Components\GridPostsSelector;
+namespace Flynt\Components\GridLearnSelector;
 
 use Flynt\FieldVariables;
 use Flynt\Utils\Options;
@@ -8,7 +8,7 @@ use Timber\Timber;
 
 const POST_TYPE = 'post';
 
-add_filter('Flynt/addComponentData?name=GridPostsSelector', function ($data) {
+add_filter('Flynt/addComponentData?name=GridLearnSelector', function ($data) {
 
     $postType = POST_TYPE;
 
@@ -20,8 +20,8 @@ add_filter('Flynt/addComponentData?name=GridPostsSelector', function ($data) {
 function getACFLayout()
 {
     return [
-        'name' => 'GridPostsSelector',
-        'label' => 'Grid: Posts Selector',
+        'name' => 'GridLearnSelector',
+        'label' => 'Grid: Learn Selector',
         'sub_fields' => [
             [
                 'label' => __('Title', 'flynt'),
@@ -71,30 +71,6 @@ function getACFLayout()
                 'return_format' => 'post_object',
                 'ui' => 1,
                 'required' => 0,
-            ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'layout' => 'block',
-                'sub_fields' => [
-                    [
-                        'label' => __('Columns', 'flynt'),
-                        'name' => 'columns',
-                        'type' => 'number',
-                        'default_value' => 3,
-                        'min' => 1,
-                        'max' => 4,
-                        'step' => 1
-                    ]
-                ]
             ]
         ]
     ];

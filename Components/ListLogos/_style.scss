@@ -1,4 +1,23 @@
 [is='flynt-list-logos'] {
+  .preContent {
+    &Title {
+      display: flex;
+      flex-flow: row wrap;
+      margin-bottom: $padding-mobile;
+
+      h3 {
+        margin-bottom: 0;
+        margin-right: $padding-mobile;
+        max-width: 20%;
+      }
+
+      .separator {
+        border-bottom: 1px solid $black;
+        flex-grow: 2;
+      }
+    }
+  }
+  
   .list {
     @include reset-list;
     @include grid(2, center, 12px, 12px);

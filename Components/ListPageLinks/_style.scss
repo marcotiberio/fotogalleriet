@@ -1,0 +1,47 @@
+[is='flynt-list-page-links'] {
+  .preContent {
+    &Title {
+      display: flex;
+      flex-flow: row wrap;
+      margin-bottom: $padding-mobile;
+
+      h2 {
+        margin-bottom: 0;
+        margin-right: $padding-mobile;
+        max-width: 50%;
+      }
+
+      .separator {
+        border-bottom: 1px solid $black;
+        flex-grow: 2;
+      }
+    }
+  }
+
+  .pageLinksList {
+    @include reset-list;
+    column-gap: $padding-desktop * 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    li {
+      border-bottom: 1px solid $black;
+      padding: $padding-mobile 0;
+      width: 100%; 
+    }
+
+    &-link {
+      align-items: center;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      margin: 0;
+      width: 100%;
+
+      &::after {
+        content: '→';
+        margin-left: 10px;
+      }
+    }
+  }
+}

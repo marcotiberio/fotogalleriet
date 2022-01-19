@@ -1,9 +1,13 @@
 {% if items|length > 0 %}
   <div class="flyntComponent boxPadding" id="filter{{ title|e }}" is="flynt-grid-posts-selector">
     <div class="container">
-      {% if preContentHtml %}
+      {% if preContentHtml or preContentTitle %}
       <div class="preContent">
-        {{ preContentHtml|e('wp_kses_post') }}
+        <div class="preContentTitle">
+          <h3>{{ preContentTitle }}</h3>
+          <div class="separator"></div>
+        </div>
+        <div>{{ preContentHtml|e('wp_kses_post') }}</div>
       </div>
       {% endif %}
       {# <div class="allPostsLink">

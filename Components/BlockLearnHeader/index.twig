@@ -1,0 +1,13 @@
+<div class="flyntComponent" is="flynt-block-learn-header">
+  <div class="container">
+    {% if post.thumbnail %}
+      <div class="featuredImage">
+        {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeLarge' }, noComponentSpacing: true }) }}
+      </div>
+    {% endif %}
+    <div class="content">
+      <div class="interview-title h2">{{ post.title }}</div>
+      <div class="interview-subtitle h3">{{ post.intro }}</div>
+    </div>
+  </div>
+</div>

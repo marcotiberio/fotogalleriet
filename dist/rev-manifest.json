@@ -1,4 +1,11 @@
 {
+  "Components/ListPageLinks/Assets/facebook.svg": "Components/ListPageLinks/Assets/facebook-59680163b5.svg",
+  "Components/ListPageLinks/Assets/instagram.svg": "Components/ListPageLinks/Assets/instagram-16d4019372.svg",
+  "Components/ListPageLinks/Assets/linkedin.svg": "Components/ListPageLinks/Assets/linkedin-9bcc5778c4.svg",
+  "Components/ListPageLinks/Assets/mail.svg": "Components/ListPageLinks/Assets/mail-4b76b6943d.svg",
+  "Components/ListPageLinks/Assets/twitter.svg": "Components/ListPageLinks/Assets/twitter-65b7f849b2.svg",
+  "Components/ListPageLinks/Assets/xing.svg": "Components/ListPageLinks/Assets/xing-d0faa4294a.svg",
+  "Components/ListPageLinks/Assets/youtube.svg": "Components/ListPageLinks/Assets/youtube-5ed41aaa24.svg",
   "Components/ListSocial/Assets/facebook.svg": "Components/ListSocial/Assets/facebook-59680163b5.svg",
   "Components/ListSocial/Assets/instagram.svg": "Components/ListSocial/Assets/instagram-16d4019372.svg",
   "Components/ListSocial/Assets/linkedin.svg": "Components/ListSocial/Assets/linkedin-9bcc5778c4.svg",
@@ -30,7 +37,7 @@
   "assets/fonts/montserrat-v14-latin-regular.woff2": "assets/fonts/montserrat-v14-latin-regular-bc3aa95dca.woff2",
   "assets/icons/check-circle.svg": "assets/icons/check-circle-98401bcdb9.svg",
   "assets/icons/spinner.svg": "assets/icons/spinner-2e5c842fc5.svg",
-  "assets/main.css": "assets/main-c7fd3d2fdf.css",
+  "assets/main.css": "assets/main-f436ea8f0f.css",
   "assets/main.js": "assets/main-2700fbd80c.js",
   "assets/main.js.LICENSE.txt": "assets/main-957f80e714.js.LICENSE.txt"
 }

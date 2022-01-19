@@ -1,14 +1,20 @@
 [is='flynt-block-wysiwyg-two-col'] {
+  &:last-child {
+    .container {
+      border-bottom: 0;
+    }
+  }
+
   .container {
+    border-bottom: 1px solid $black;
     display: flex;
     height: auto;
     justify-content: space-between;
-    // min-height: 80vh;
+    padding-bottom: $padding-desktop;
     row-gap: $padding-desktop;
 
     @media (max-width: $breakpoint-mobile-horizontal) {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, 1fr);
+      display: block;
     }
   }
   
@@ -22,10 +28,18 @@
 
     &-left {
       width: 20%;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        width: 100%;
+      }
     }
 
     &-right {
       width: 50%;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        width: 100%;
+      }
     }
   }
 }

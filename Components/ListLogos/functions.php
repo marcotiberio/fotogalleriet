@@ -33,11 +33,23 @@ function getACFLayout()
             ],
             [
                 'label' => __('Title', 'flynt'),
+                'name' => 'preContentTitle',
+                'type' => 'text'
+            ],
+            [
+                'label' => __('Title', 'flynt'),
                 'name' => 'preContentHtml',
                 'type' => 'wysiwyg',
                 'tabs' => 'visual,text',
                 'media_upload' => 0,
                 'delay' => 1,
+            ],
+            [
+                'label' => __('Logos', 'flynt'),
+                'name' => 'logosTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
             ],
             [
                 'label' => __('Logos', 'flynt'),
@@ -89,28 +101,6 @@ function getACFLayout()
                 'open' => 0,
                 'multi_expand' => 0,
                 'endpoint' => 1,
-            ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0,
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'sub_fields' => [
-                    FieldVariables\getTheme(),
-                    [
-                        'label' => __('Show as Card', 'flynt'),
-                        'name' => 'card',
-                        'type' => 'true_false',
-                        'default_value' => 0,
-                        'ui' => 1,
-                    ],
-                ]
             ],
         ]
     ];

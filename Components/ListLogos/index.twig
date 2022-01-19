@@ -1,8 +1,12 @@
-<div class="flyntComponent componentSpacing {{ options.card ? 'flyntComponent--card' }} {{ options.theme }}" is="flynt-list-logos">
-  <div class="container centerMaxWidthContainer">
-    {% if preContentHtml %}
+<div class="flyntComponent componentSpacing" is="flynt-list-logos">
+  <div class="container">
+    {% if preContentHtml or preContentTitle %}
       <div class="preContent">
-        {{ preContentHtml|e('wp_kses_post') }}
+        <div class="preContentTitle">
+          <h3>{{ preContentTitle }}</h3>
+          <div class="separator"></div>
+        </div>
+        <div>{{ preContentHtml|e('wp_kses_post') }}</div>
       </div>
     {% endif %}
     <div class="content">
