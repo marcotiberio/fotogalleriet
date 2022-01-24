@@ -6,6 +6,7 @@
     </div>
     <div class="container-inner container-inner--right">
       {# {% include 'Partials/_language.twig' %} #}
+      <div class="current-time h4">{{ fn('wp_date', 'H:i') }}</div>
       {% if menu %}
         {% include 'Partials/_hamburger.twig' with { 'a11y': a11y } only %}
       {% endif %}

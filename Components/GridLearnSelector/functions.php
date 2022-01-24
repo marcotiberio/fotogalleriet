@@ -56,9 +56,6 @@ function getACFLayout()
                 'name' => 'post',
                 'type' => 'relationship',
                 'post_type' => [
-                    'post',
-                    'exhibition',
-                    'interview',
                     'learn',
                 ],
                 'filters' => array(

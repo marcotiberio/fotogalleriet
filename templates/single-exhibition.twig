@@ -7,9 +7,9 @@
       <div class="exhibition-meta componentSpacing">
         <div class="artist">{{ post.subtitle }}</div>
         <div class="info">
-          <span>{{ post.eventType }}</span>
-          <span>{{ post.when|date("d.m.Y") }}</span>
-          <span>{{ post.time|date("g:i") }}</span>
+          <span>{{ post.exhibitionType }}</span>
+          <span>{{ post.exhibitionDate|date("d.m.Y") }}</span>
+          <span>{{ post.exhibitionTime|date("g:i") }}</span>
         </div>
         </div>
       {% for component in post.meta('exhibitionComponents') %}

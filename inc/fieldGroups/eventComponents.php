@@ -36,7 +36,7 @@ add_action('Flynt/afterRegisterComponents', function () {
             ],
             [
                 'label' => __('Date', 'flynt'),
-                'name' => 'when',
+                'name' => 'eventDate',
                 'type' => 'date_picker',
                 'wrapper' => [
                     'width' => '25',
@@ -44,7 +44,7 @@ add_action('Flynt/afterRegisterComponents', function () {
             ],
             [
                 'label' => __('Time', 'flynt'),
-                'name' => 'time',
+                'name' => 'eventTime',
                 'type' => 'time_picker',
                 'wrapper' => [
                     'width' => '25',

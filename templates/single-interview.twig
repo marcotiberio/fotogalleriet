@@ -7,8 +7,8 @@
     </header>
     <section class="post-main">
       <div class="interview-meta componentSpacing">
-        <span>{{ post.eventType }}</span>
-        <span>{{ post.when|date("d.m.Y") }}</span>
+        <span>{{ post.interviewType }}</span>
+        <span>{{ post.interviewDate|date("d.m.Y") }}</span>
       </div>
       {% for component in post.meta('interviewComponents') %}
         {{ renderComponent(component) }}

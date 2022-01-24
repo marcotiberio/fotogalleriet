@@ -7,7 +7,7 @@
 }
 
 [is='flynt-navigation-burger'] {
-  $navigation-height: 75px;
+  $navigation-height: 50px;
 
   height: $navigation-height;
 
@@ -23,7 +23,7 @@
     height: $navigation-height;
     justify-content: space-between;
     left: 0;
-    padding: 15px $padding-desktop;
+    padding: 10px $padding-desktop;
     position: fixed;
     right: 0;
     top: 0;

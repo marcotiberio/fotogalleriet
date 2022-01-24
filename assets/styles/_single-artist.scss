@@ -1,0 +1,64 @@
+/* Custom styling for exhibition posts */
+
+.single-artist {
+  .post {
+    display: flex;
+    flex-flow: row wrap;
+
+    &-header {
+      column-gap: $padding-desktop;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+
+      .info {
+        .post-title {
+          border-bottom: 1px solid $black;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+
+    &-main {
+      width: 100%;
+    
+      .componentSpacing {
+        margin: $component-spacing-mobile/2 0;
+        padding: 0 $padding-mobile;
+  
+        @media (min-width: $breakpoint-tablet) {
+          margin: $component-spacing-desktop/2 0;
+          padding: 0 $padding-mobile;
+        }
+  
+        @media (min-width: $breakpoint-desktop) {
+          margin: $component-spacing-desktop/2 0;
+          padding: 0 $padding-desktop;
+        }
+  
+        &[class*='theme'] {
+          margin: 0;
+          padding: $component-spacing-mobile/2 0;
+  
+          @media (min-width: $breakpoint-tablet) {
+            padding: $component-spacing-desktop/2 0;
+          }
+  
+          @media (min-width: $breakpoint-desktop) {
+            padding: $component-spacing-desktop/2 0;
+          }
+        }
+      }
+  
+      > .componentSpacing {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-related {
+      width: 100%;
+    }
+  }
+}

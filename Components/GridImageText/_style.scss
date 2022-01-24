@@ -2,6 +2,8 @@
   .grid {
     @include reset-list;
     align-items: center;
+    border-bottom: 3px solid $black;
+    border-top: 3px solid $black;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
@@ -12,16 +14,32 @@
     }
 
     &-item {
-      padding: $gap 0 0 $gap;
+      border-right: 3px solid $black;
       width: 100%;
+
+      img {
+        display: block;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      &:nth-child(3n) {
+        border-right: 0;
+      }
     }    
   }
 
   .content {
+    background-color: #cecece;
     height: 100%;
 
     &-inner {
       @include reset-content-margins;
+      border-top: 3px solid $black;
+      display: flex;
+      justify-content: center;
 
       &:not(.boxPadding) {
         padding: $gap 0;

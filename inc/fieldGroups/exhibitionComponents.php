@@ -28,7 +28,7 @@ add_action('Flynt/afterRegisterComponents', function () {
             ],
             [
                 'label' => __('Event Type', 'flynt'),
-                'name' => 'eventType',
+                'name' => 'exhibitionType',
                 'type' => 'text',
                 'wrapper' => [
                     'width' => '25',
@@ -36,7 +36,7 @@ add_action('Flynt/afterRegisterComponents', function () {
             ],
             [
                 'label' => __('Date', 'flynt'),
-                'name' => 'when',
+                'name' => 'exhibitionDate',
                 'type' => 'date_picker',
                 'wrapper' => [
                     'width' => '25',
@@ -44,7 +44,7 @@ add_action('Flynt/afterRegisterComponents', function () {
             ],
             [
                 'label' => __('Time', 'flynt'),
-                'name' => 'time',
+                'name' => 'exhibitionTime',
                 'type' => 'time_picker',
                 'wrapper' => [
                     'width' => '25',

@@ -5,42 +5,28 @@ use Flynt\Components;
 
 add_action('Flynt/afterRegisterComponents', function () {
     ACFComposer::registerFieldGroup([
-        'name' => 'interviewMeta',
-        'title' => 'Interview Meta',
+        'name' => 'artistMeta',
+        'title' => 'Artist Meta',
         'style' => '',
         'menu_order' => 1,
         'position' => 'acf_after_title',
         'fields' => [
             [
-                'label' => __('Interview Info', 'flynt'),
+                'label' => __('Artist Info', 'flynt'),
                 'name' => 'infoTab',
                 'type' => 'tab',
                 'placement' => 'top',
                 'endpoint' => 0
             ],
             [
-                'label' => __('Subtitle', 'flynt'),
-                'name' => 'subtitle',
-                'type' => 'text',
+                'label' => __('Bio', 'flynt'),
+                'name' => 'bioHtml',
+                'type' => 'wysiwyg',
+                'tabs' => 'visual,text',
+                'media_upload' => 0,
                 'wrapper' => [
-                    'width' => '33',
+                    'width' => '100',
                 ]
-            ],
-            [
-                'label' => __('Interview Type', 'flynt'),
-                'name' => 'InterviewType',
-                'type' => 'text',
-                'wrapper' => [
-                    'width' => '33',
-                ]
-            ],
-            [
-                'label' => __('Date', 'flynt'),
-                'name' => 'interviewDate',
-                'type' => 'date_picker',
-                'wrapper' => [
-                    'width' => '33',
-                ],
             ]
         ],
         'location' => [
@@ -48,30 +34,31 @@ add_action('Flynt/afterRegisterComponents', function () {
                 [
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'interview',
+                    'value' => 'artist',
                 ],
             ],
         ],
     ]);
     ACFComposer::registerFieldGroup([
-        'name' => 'interviewComponents',
-        'title' => 'Interview Components',
+        'name' => 'artistComponents',
+        'title' => 'Artist Components',
         'style' => 'seamless',
         'fields' => [
             [
-                'name' => 'interviewComponents',
-                'label' => __('Interview Components', 'flynt'),
+                'name' => 'artistComponents',
+                'label' => __('Artist Components', 'flynt'),
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
                     Components\GridImageGallery\getACFLayout(),
-                    Components\GridImageText\getACFLayout(),
-                    Components\BlockImage\getACFLayout(),
-                    Components\BlockImageText\getACFLayout(),
-                    Components\BlockQaSidebar\getACFLayout(),
+                    // Components\GridImageText\getACFLayout(),
+                    // Components\BlockImage\getACFLayout(),
+                    // Components\BlockImageText\getACFLayout(),
+                    // Components\BlockQaSidebar\getACFLayout(),
                     Components\BlockSpacer\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
-                    Components\BlockWysiwygSidebar\getACFLayout(),
+                    // Components\BlockWysiwygSidebar\getACFLayout(),
+                    Components\SliderImagesCentered\getACFLayout(),
                 ],
             ],
         ],
@@ -80,7 +67,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 [
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'interview',
+                    'value' => 'artist',
                 ],
             ],
         ],

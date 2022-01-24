@@ -1,0 +1,25 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  <article class="post">
+    <header class="post-header boxPadding">
+      <div class="info">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <div>{{ post.bioHtml|e('wp_kses_post') }}</div>
+      </div>
+      {% if post.thumbnail %}
+        <div class="featuredImage">
+          {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeFull' }, noComponentSpacing: true }) }}
+        </div>
+       {% endif %}
+    </header>
+    <section class="post-main">
+      {% for component in post.meta('visitorComponents') %}
+        {{ renderComponent(component) }}
+      {% endfor %}
+    </section>
+    <section class="post-related">
+      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h3>' ~ __('Related Content') ~ '</h3>','taxonomies': post.categories(), 'options': {'theme': 'themeLight', 'columns': 3}}) }}
+    </section>
+  </article>
+{% endblock %}

@@ -35,7 +35,7 @@
                 <div class="content-inner">
                   <div class="content-inner--info">
                     <div class="left">
-                      <span class="content-title h4">Test</span>
+                      <span class="content-title h4">{{ item.terms( {query:{taxonomy:'category', orderby:'name', order: 'ASC'}} )|join(', ') }}</span>
                       <span class="content-subtitle h4">Super Test</span>
                     </div>
                     <hr>

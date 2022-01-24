@@ -1,4 +1,4 @@
-<div class="flyntComponent componentSpacing" is="flynt-grid-image-text">
+<div class="flyntComponent" is="flynt-grid-image-text">
   <div class="container">
     {% if preContentHtml %}
       <div class="preContent">
@@ -7,23 +7,25 @@
     {% endif %}
     <ul class="grid">
       {% for item in items %}
-        {% if item.image or item.contentHtml %}
+        {% if item.image or item.contentHtml or item.contentLink %}
           <li class="grid-item">
-            <div class="content">
-              {% if item.image %}
-                <img class="content-image lazyload"
-                  src="{{ item.image.src|resizeDynamic(500) }}"
-                  srcset="{{ placeholderImage(500, 500 / item.image.aspect) }}"
-                  data-srcset="{{ function('wp_get_attachment_image_srcset', item.image.id) }}"
-                  data-sizes="auto"
-                  alt="{{ item.image.alt|e }}">
-              {% endif %}
-              {% if item.contentHtml %}
-                <div class="content-inner">
-                  {{ item.contentHtml|e('wp_kses_post') }}
-                </div>
-              {% endif %}
-            </div>
+            <a class="" href="{{ item.contentLink|e }}">
+              <div class="content">
+                {% if item.image %}
+                  <img class="content-image lazyload"
+                    src="{{ item.image.src|resizeDynamic(500) }}"
+                    srcset="{{ placeholderImage(500, 500 / item.image.aspect) }}"
+                    data-srcset="{{ function('wp_get_attachment_image_srcset', item.image.id) }}"
+                    data-sizes="auto"
+                    alt="{{ item.image.alt|e }}">
+                {% endif %}
+                {% if item.contentTitle %}
+                  <div class="content-inner">
+                    <h3>{{ item.contentTitle|e }}</h3>
+                  </div>
+                {% endif %}
+              </div>
+            </a>
           </li>
         {% endif %}
       {% endfor %}

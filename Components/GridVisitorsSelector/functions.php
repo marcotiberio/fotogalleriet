@@ -1,6 +1,6 @@
 <?php
 
-namespace Flynt\Components\GridPostsSelector;
+namespace Flynt\Components\GridVisitorsSelector;
 
 use Flynt\FieldVariables;
 use Flynt\Utils\Options;
@@ -8,7 +8,7 @@ use Timber\Timber;
 
 const POST_TYPE = 'post';
 
-add_filter('Flynt/addComponentData?name=GridPostsSelector', function ($data) {
+add_filter('Flynt/addComponentData?name=GridVisitorsSelector', function ($data) {
 
     $postType = POST_TYPE;
 
@@ -20,8 +20,8 @@ add_filter('Flynt/addComponentData?name=GridPostsSelector', function ($data) {
 function getACFLayout()
 {
     return [
-        'name' => 'GridPostsSelector',
-        'label' => 'Grid: Posts Selector',
+        'name' => 'GridVisitorsSelector',
+        'label' => 'Grid: Visitors Selector',
         'sub_fields' => [
             [
                 'label' => __('Title', 'flynt'),
@@ -56,18 +56,13 @@ function getACFLayout()
                 'name' => 'post',
                 'type' => 'relationship',
                 'post_type' => [
-                    'post',
-                    'exhibition',
-                    'interview',
-                    'learn',
-                    'artist',
                     'visitor',
                 ],
-                'filters' => array(
-                    0 => 'search',
-                    1 => 'post_type',
-                    2 => 'taxonomy',
-                ),
+                // 'filters' => array(
+                //     0 => 'search',
+                //     1 => 'post_type',
+                //     2 => 'taxonomy',
+                // ),
                 'allow_null' => 0,
                 'multiple' => 0,
                 'return_format' => 'post_object',
@@ -80,29 +75,12 @@ function getACFLayout()
                 'type' => 'tab',
                 'placement' => 'top',
                 'endpoint' => 0
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'layout' => 'block',
-                'sub_fields' => [
-                    [
-                        'label' => __('Columns', 'flynt'),
-                        'name' => 'columns',
-                        'type' => 'number',
-                        'default_value' => 3,
-                        'min' => 1,
-                        'max' => 4,
-                        'step' => 1
-                    ]
-                ]
             ]
         ]
     ];
 }
 
-Options::addTranslatable('GridPostsSelector', [
+Options::addTranslatable('GridVisitorsSelector', [
     [
         'label' => __('Labels', 'flynt'),
         'name' => 'labelsTab',
