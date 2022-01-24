@@ -163,7 +163,9 @@
       }
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "scrollmagic": "^2.0.8"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
