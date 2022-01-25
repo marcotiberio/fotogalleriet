@@ -25,9 +25,9 @@
         </a>
         <h3 class="exhibition-subtitle h3">{{ item.subtitle }}</h3>
         <div class="exhibition-info">
-          <span>{{ item.eventType }}</span>
-          <span>{{ item.when|date("d.m.Y") }}</span>
-          <span>{{ item.time|date("g:i a") }}</span>
+          <span>{{ item.postType }}</span>
+          <span>{{ item.postDate|date("d.m.Y") }}</span>
+          <span>{{ item.postTime|date("g:i a") }}</span>
         </div>
         {# <p class="content-excerpt">{{ item.preview.read_more(false).length(18) }}</p> #}
       </div>

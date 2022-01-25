@@ -1,4 +1,6 @@
 [is='flynt-block-shortcode'] {
+  padding: $padding-desktop;
+  
   .content {
     @include reset-content-margins;
     text-align: inherit;

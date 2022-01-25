@@ -40,9 +40,7 @@
                     </div>
                     <hr>
                     <div class="right">
-                    {% if item.when %}
-                      <time class="content-date meta-date" datetime="{{ item.when }}">{{ item.when|date }}</time>
-                    {% endif %}
+                    <time class="content-date meta-date" datetime="{{ item.postDate|date("d.m.Y") }}">{{ item.postDate|date("d.m.Y") }}</time>
                     </div>
                   </div>
                   <div class="content-inner--title">

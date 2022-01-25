@@ -28,7 +28,7 @@ add_action('Flynt/afterRegisterComponents', function () {
             ],
             [
                 'label' => __('Interview Type', 'flynt'),
-                'name' => 'InterviewType',
+                'name' => 'postType',
                 'type' => 'text',
                 'wrapper' => [
                     'width' => '33',
@@ -36,7 +36,7 @@ add_action('Flynt/afterRegisterComponents', function () {
             ],
             [
                 'label' => __('Date', 'flynt'),
-                'name' => 'interviewDate',
+                'name' => 'postDate',
                 'type' => 'date_picker',
                 'wrapper' => [
                     'width' => '33',
