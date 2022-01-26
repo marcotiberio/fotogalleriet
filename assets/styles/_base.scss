@@ -14,7 +14,7 @@ html {
   box-sizing: border-box;
   color: $color-text;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
@@ -65,11 +65,11 @@ h1,
 .h1 {
   font-size: 2.25rem;
   line-height: 1;
-  margin-bottom: 1.5rem;
-  padding-top: 2rem;
+  // margin-bottom: 1.5rem;
+  // padding-top: 2rem;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 6.5rem;
+    font-size: 7rem;
   }
 }
 
@@ -77,10 +77,10 @@ h2,
 .h2 {
   font-size: 1.5rem;
   line-height: 1;
-  padding-top: 1rem;
+  // padding-top: 1rem;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -88,10 +88,10 @@ h3,
 .h3 {
   font-size: 1.125rem;
   line-height: 1;
-  padding-top: 1rem;
+  // padding-top: 1rem;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 1.85rem;
+    font-size: 2rem;
   }
 }
 
@@ -308,14 +308,15 @@ button {
 
   &--ghost {
     background-color: transparent;
-    border-color: $color-accent;
-    color: $color-accent;
+    border-color: $black;
+    border-radius: 1rem;
+    color: $black;
 
     &:hover,
     &:focus {
-      background-color: transparent;
-      border-color: $color-background-dark;
-      color: $color-background-dark;
+      background-color: $black;
+      border-color: $black;
+      color: $white;
     }
   }
 
