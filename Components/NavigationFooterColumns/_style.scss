@@ -27,12 +27,14 @@
       display: grid;
       flex-direction: column;
       grid-template-columns: repeat(3, 1fr);
+      padding: $padding-mobile;
 
       @media (min-width: $breakpoint-tablet) {
         width: 66.66%;
       }
 
       @media (min-width: $breakpoint-tablet-horizontal) {
+        padding: $padding-desktop;
         width: 75%;
       }
     }
@@ -45,6 +47,7 @@
       flex-direction: column;
       grid-template-columns: repeat(3, 1fr);
       margin: 0;
+      padding: $padding-mobile;
 
       @media (min-width: $breakpoint-tablet) {
         margin-top: 0;
@@ -52,6 +55,7 @@
       }
 
       @media (min-width: $breakpoint-tablet-horizontal) {
+        padding: $padding-desktop;
         width: 40%;
       }
     }

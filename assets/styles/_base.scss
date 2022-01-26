@@ -282,10 +282,10 @@ button {
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  font-size: 0.875rem;
+  font-size: inherit;
   font-weight: 700;
   line-height: inherit;
-  padding: 0.5rem;
+  padding: 1rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -309,7 +309,7 @@ button {
   &--ghost {
     background-color: transparent;
     border-color: $black;
-    border-radius: 1rem;
+    border-radius: 5rem;
     color: $black;
 
     &:hover,
@@ -663,10 +663,10 @@ select {
 
 .boxPadding {
   margin: auto;
-  padding: 20px;
+  padding: $padding-mobile;
 
   @media (min-width: $breakpoint-tablet-horizontal) {
-    padding: 40px;
+    padding: $padding-desktop;
   }
 }
 

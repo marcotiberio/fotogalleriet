@@ -8,7 +8,7 @@ function getACFLayout()
 {
     return [
         'name' => 'BlockWysiwygTwoCol',
-        'label' => 'Block: Wysiwyg Two Columns (4 blocks)',
+        'label' => 'Block: Wysiwyg Two Columns',
         'sub_fields' => [
             [
                 'label' => __('Content', 'flynt'),

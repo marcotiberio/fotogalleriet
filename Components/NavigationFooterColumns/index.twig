@@ -1,13 +1,13 @@
 <div class="flyntComponent" is="flynt-navigation-footer-columns">
   <div class="container">
     <div class="columns">
-      <div class="columns-menu boxPadding">
+      <div class="columns-menu">
         {# {% include "Partials/_menu.twig" with { items: menu.items } %} #}
         <div>{{ linklistLeftHtml|e('wp_kses_post') }}</div>
         <div>{{ linklistCenterHtml|e('wp_kses_post') }}</div>
         <div>{{ linklistRightHtml|e('wp_kses_post') }}</div>
       </div>
-      <div class="columns-info boxPadding">
+      <div class="columns-info">
         <div>{{ socialContentLeftHtml|e('wp_kses_post') }}</div>
         <div>{{ socialContentCenterHtml|e('wp_kses_post') }}</div>
         <div>{{ socialContentRightHtml|e('wp_kses_post') }}</div>
