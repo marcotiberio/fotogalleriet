@@ -28,15 +28,17 @@
     .allPostsLink {
       align-items: center;
       display: flex;
-      margin-bottom: $padding-desktop;
-      margin-left: $padding-desktop;
-      margin-right: $padding-desktop;
       margin-top: $padding-desktop;
 
-      &::after {
-        color: currentColor;
-        content: '>';
-        margin-left: 10px;
+      a {
+        color: #c6c6c6;
+        font-size: 2.25rem;
+        line-height: 1;
+        text-transform: capitalize;
+
+        @media (min-width: $breakpoint-mobile-horizontal) {
+          font-size: 7rem;
+        }
       }
     }
 

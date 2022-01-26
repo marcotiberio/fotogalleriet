@@ -94,6 +94,15 @@ Options::addTranslatable('GridVisitorsSelector', [
         'type' => 'group',
         'sub_fields' => [
             [
+                'label' => __('All Posts Link', 'flynt'),
+                'name' => 'allPostsLink',
+                'type' => 'page_link',
+                'required' => 0,
+                'wrapper' => [
+                    'width' => 50
+                ],
+            ],
+            [
                 'label' => __('All Posts', 'flynt'),
                 'name' => 'allPosts',
                 'type' => 'text',
