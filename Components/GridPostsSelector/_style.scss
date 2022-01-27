@@ -101,6 +101,8 @@
       }
 
       &-inner {
+        margin-top: $padding-mobile;
+
         &--info {
           align-items: center;
           display: flex;
@@ -138,11 +140,17 @@
           display: flex;
           flex-flow: column wrap;
           justify-content: space-between;
+          margin-top: $padding-mobile/2;
 
           h3 {
             margin-bottom: 0;
             padding-top: 0;
           }
+        }
+
+        &-subtitle {
+          margin-bottom: $padding-mobile/2;
+
         }
       }
     }

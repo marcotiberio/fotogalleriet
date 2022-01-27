@@ -8,9 +8,7 @@
   list-style: none;
   margin: 0;
   overflow-y: auto;
-  padding-bottom: 30px;
-  padding-left: 16.5vw;
-  padding-top: 0;
+  padding: 10px $padding-desktop;
   position: fixed;
   top: $navigation-height;
   transform: translateY(-100%);
@@ -37,7 +35,7 @@
     color: $color-text;
     display: block;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 400;
     padding: 0;
     text-align: left;
     text-decoration: none;
