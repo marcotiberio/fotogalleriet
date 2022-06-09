@@ -1,0 +1,24 @@
+/* Custom styling for online exhibition posts */
+
+.single-onlinexhibition {
+  header {
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    height: calc(100vh - 50px);
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .mainContent {
+    .flyntComponent {
+      height: calc(100vh - 50px);
+      width: 100vw;
+    }
+  }
+
+  .mainFooter {
+    display: none;
+  }
+}

@@ -2,8 +2,10 @@ import './scripts/publicPath'
 import 'console-polyfill'
 import 'normalize.css/normalize.css'
 import './main.scss'
+import './scripts/custom.js'
 import $ from 'jquery'
 import feather from 'feather-icons'
+
 // import ScrollMagic from 'scrollmagic'
 
 import installCE from 'document-register-element/pony'
@@ -30,3 +32,4 @@ function importAll (r) {
 }
 
 importAll(require.context('../Components/', true, /\/script\.js$/))
+require.resolve('./scripts/custom.js')

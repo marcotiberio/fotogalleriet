@@ -1,12 +1,12 @@
 <nav is="flynt-navigation-burger" class="flyntComponent" aria-label="{{ __("Main", "flynt") }}">
-  <div class="container">
+  <div class="container navigationBurger">
     <div class="container-inner container-inner--left">
       {% include 'Partials/_logo.twig' with { 'logo': logo, 'site': site } only %}
       {% include 'Partials/_search.twig' %}
     </div>
     <div class="container-inner container-inner--right">
       {# {% include 'Partials/_language.twig' %} #}
-      <div class="current-time h4">{{ fn('wp_date', 'H:i') }}</div>
+      {# <div class="current-time h4">{{ fn('wp_date', 'H:i') }}</div> #}
       {% if menu %}
         {% include 'Partials/_hamburger.twig' with { 'a11y': a11y } only %}
       {% endif %}

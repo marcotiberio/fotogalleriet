@@ -23,7 +23,7 @@
     height: $navigation-height;
     justify-content: space-between;
     left: 0;
-    padding: 10px $padding-desktop;
+    padding: 10px $padding-mobile;
     position: fixed;
     right: 0;
     top: 0;
@@ -37,19 +37,21 @@
       width: 50%;
 
       &--left {
-        justify-content: flex-start;
+        width: 90%;
 
         a {
-          margin-right: $padding-desktop * 2;
+          text-align: left;
+          width: 30%;
+        }
+
+        .searchForm {
+          width: 70%;
         }
       }
 
       &--right {
         justify-content: flex-end;
-
-        button {
-          margin-left: $padding-desktop * 2;
-        }
+        width: 10%;
       }
     }
 
@@ -60,6 +62,10 @@
         top: 32px;
       }
     }
+  }
+
+  .navigationBurger-hide {
+    display: none;
   }
 
   @import 'Partials/language';

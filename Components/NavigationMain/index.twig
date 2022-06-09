@@ -1,18 +1,29 @@
 <nav is="flynt-navigation-main" class="flyntComponent" aria-label="{{ __("Main", "flynt") }}">
-  <div class="wrapper">
-    <div class="container centerMaxWidthContainer">
-      <a class="logo" href="{{ site.link }}">
-        <img class="logo-image" src="{{ logo.src }}" alt="{{ logo.alt }}">
+  <div class="wrapper navigationMain navigationMain-show">
+    <div class="container">
+      <a class="logo h4" href="{{ site.link }}">
+        Fotogalleriet
+        {# <img class="logo-image" src="{{ logo.src }}" alt="{{ logo.alt }}"> #}
       </a>
+      <div class="container-inner container-inner--center">
       {% if menu %}
         <ul class="menu">
           {% for item in menu.items %}
-            <li class="menu-item {{ item.current ? 'menu-item--current' }}">
+            <li class="h4 menu-item {{ item.current ? 'menu-item--current' }}">
               <a class="menu-link" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noopener noreferrer"' }}>{{ item.title }}</a>
             </li>
           {% endfor %}
         </ul>
+        {% include 'Partials/_search.twig' %}
       {% endif %}
+      </div>
+      <div class="container-inner logologo">
+        <h4>Logo Logo</h4>
+      </div>
+      <div class="container-inner container-inner--right">
+        <div class="current-time h4">{{ fn('wp_date', 'H:i') }}</div>
+        {# {% include 'Partials/_language.twig' %} #}
+      </div>
     </div>
   </div>
 </nav>

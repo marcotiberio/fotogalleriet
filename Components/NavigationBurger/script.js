@@ -15,17 +15,17 @@ class NavigationBurger extends window.HTMLElement {
     this.resolveElements()
   }
 
+  resolveElements () {
+    this.$menu = $('.menu', this)
+    this.$menuButton = $('.hamburger', this)
+  }
+
   bindFunctions () {
     this.triggerMenu = this.triggerMenu.bind(this)
   }
 
   bindEvents () {
     this.$.on('click', '[data-toggle-menu]', this.triggerMenu)
-  }
-
-  resolveElements () {
-    this.$menu = $('.menu', this)
-    this.$menuButton = $('.hamburger', this)
   }
 
   connectedCallback () {}

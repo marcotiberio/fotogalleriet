@@ -180,6 +180,11 @@ blockquote,
   }
 }
 
+::placeholder {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 /**
 * 1.1 Lists & Tables
 *
@@ -563,6 +568,10 @@ select {
 
 .mainContent {
   flex: 1 0 auto;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    margin-top: 145px;
+  }
 }
 
 .flyntComponent {
