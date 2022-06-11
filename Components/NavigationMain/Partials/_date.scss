@@ -1,0 +1,28 @@
+.current-time {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+
+  .sup {
+    display: none;
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+
+  &--open {
+    &::after {
+      color: #0f0;
+      content: '•';
+    }
+  }
+
+  &--closed {
+    &::after {
+      color: #f00;
+      content: '•';
+    }
+  }
+}

@@ -8,12 +8,8 @@
   justify-content: flex-start;
   z-index: 101;
 
-  a {
-    text-decoration: none;
-  }
-
   &-image {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 125px;
   }
 }

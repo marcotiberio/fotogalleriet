@@ -25,16 +25,6 @@
     padding: $padding-mobile $padding-desktop;
   }
 
-  .logo {
-    display: block;
-    height: 100%;
-
-    &-image {
-      height: 100%;
-      width: 125px;
-    }
-  }
-
   .menu {
     align-items: flex-start;
     display: flex;
@@ -70,11 +60,9 @@
   }
 
   .logologo {
-    text-align: center;
-  }
-
-  .current-time {
-    text-align: right;
+    &-image {
+      width: 75px;
+    }
   }
 
   .navigationMain-show {
@@ -90,4 +78,6 @@
   @import 'Partials/language';
   @import 'Partials/search';
   @import 'Partials/hamburger';
+  @import 'Partials/logo';
+  @import 'Partials/date';
 }

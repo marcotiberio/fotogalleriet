@@ -14,3 +14,14 @@ $(document).ready(function () {
     e.preventDefault()
   })
 })
+
+$(document).ready(function () {
+  var d = new Date()
+  if (d.getHours() >= 7 && d.getHours() <= 15) {
+    $('.current-time--open').hide()
+    $('.current-time--closed').show()
+  } else {
+    $('.current-time--open').show()
+    $('.current-time--closed').hide()
+  }
+})

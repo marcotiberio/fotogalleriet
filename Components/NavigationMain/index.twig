@@ -1,10 +1,7 @@
 <nav is="flynt-navigation-main" class="flyntComponent" aria-label="{{ __("Main", "flynt") }}">
   <div class="wrapper navigationMain navigationMain-show">
     <div class="container">
-      <a class="logo h4" href="{{ site.link }}">
-        Fotogalleriet
-        {# <img class="logo-image" src="{{ logo.src }}" alt="{{ logo.alt }}"> #}
-      </a>
+      {% include 'Partials/_logo.twig' %}
       <div class="container-inner container-inner--center">
       {% if menu %}
         <ul class="menu">
@@ -18,12 +15,9 @@
       {% endif %}
       </div>
       <div class="container-inner logologo">
-        <h4>Logo Logo</h4>
+        <img class="logologo-image" src="/wp-content/uploads/2022/06/F_BLACK.svg">
       </div>
-      <div class="container-inner container-inner--right">
-        <div class="current-time h4">{{ fn('wp_date', 'H:i') }}</div>
-        {# {% include 'Partials/_language.twig' %} #}
-      </div>
+      {% include 'Partials/_date.twig' %}
     </div>
   </div>
 </nav>
