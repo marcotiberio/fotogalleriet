@@ -16,6 +16,8 @@
     &::after {
       color: #0f0;
       content: '•';
+      font-size: 1rem;
+      margin-left: 5px;
     }
   }
 
@@ -23,6 +25,8 @@
     &::after {
       color: #f00;
       content: '•';
+      font-size: 1rem;
+      margin-left: 5px;
     }
   }
 }

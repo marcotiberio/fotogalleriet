@@ -1,6 +1,11 @@
 [is='flynt-block-spacer'] {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: inherit;
+  background-color: $black;
+  height: 2px;
+  margin-left: $component-spacing-desktop;
+  width: calc(100vw - 80px);
+
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    margin-left: $component-spacing-mobile;
+    width: calc(100vw - 40px);
+  }
 }

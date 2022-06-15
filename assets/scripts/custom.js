@@ -17,11 +17,14 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   var d = new Date()
-  if (d.getHours() >= 7 && d.getHours() <= 15) {
-    $('.current-time--open').hide()
-    $('.current-time--closed').show()
-  } else {
+  var dayOfWeek = d.getDay()
+  var hour = d.getHours()
+
+  if (dayOfWeek === 6 || dayOfWeek === 0 || hour >= 9 || hour <= 17) {
     $('.current-time--open').show()
     $('.current-time--closed').hide()
+  } else {
+    $('.current-time--open').hide()
+    $('.current-time--closed').show()
   }
 })
