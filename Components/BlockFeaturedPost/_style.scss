@@ -24,6 +24,8 @@
       position: absolute;
       
       &-inner {
+        mix-blend-mode: difference;
+        
         h2 {
           color: $white;
           margin-bottom: 0;

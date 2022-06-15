@@ -3,7 +3,7 @@
     <div class="container">
       {% if preContentHtml %}
         <div class="preContent">
-          <h4>{{ preContentHtml|e('wp_kses_post') }}</h4>
+          {{ preContentHtml|e('wp_kses_post') }}
           <div class="separator"></div>
         </div>
       {% endif %}
@@ -24,8 +24,8 @@
                     </div>
                   </div>
                   <div class="content-inner-bottom">
-                    <h4 class="content-title">{{ item.title }}</h4>
-                    <p class="content-subtitle">{{ item.subtitle }}</p>
+                    <div class="content-title h3">{{ item.title }}</div>
+                    <div class="content-subtitle h4">{{ item.subtitle }}</div>
                     {# <p class="content-excerpt">{{ item.preview.read_more(false).length(18) }}</p> #}
                   </div>
                 </div>

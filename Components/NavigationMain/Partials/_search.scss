@@ -1,5 +1,5 @@
 .searchForm {
-  transform: translateX(-16px);
+  transform: translateX(-6px);
   
   &-field {
     align-items: flex-start;
@@ -16,14 +16,15 @@
     border-radius: 0;
     color: #000;
     font-family: inherit;
-    height: 30px;
-    margin: 0 0 0 20px;
+    // height: 30px;
+    margin: 0 0 0 10px;
     min-height: auto;
+    outline: 0;
     padding: 0;
   }
 
   &-submit {
-    margin-top: 5px;
+    margin-top: 0;
     padding: 0;
   }
 }

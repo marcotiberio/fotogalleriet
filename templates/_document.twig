@@ -19,7 +19,7 @@
             {{ renderComponent('NavigationBurger') }}
           {% endblock %}
         </header>
-        <main id="mainContent" class="mainContent" aria-label="{{ __('Content', 'flynt') }}">
+        <main id="mainContent" class="mainContent margin-top" aria-label="{{ __('Content', 'flynt') }}">
           {% if function('post_password_required') %}
             {{ function('get_the_password_form') }}
           {% else %}

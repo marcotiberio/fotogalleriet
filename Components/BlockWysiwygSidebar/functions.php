@@ -8,7 +8,7 @@ function getACFLayout()
 {
     return [
         'name' => 'blockWysiwygSidebar',
-        'label' => 'Block: Wysiwyg Sidebar',
+        'label' => 'Block: Text Editor + Sidebar',
         'sub_fields' => [
             [
                 'label' => __('Sidebar', 'flynt'),

@@ -20,7 +20,7 @@ $(document).ready(function () {
   var dayOfWeek = d.getDay()
   var hour = d.getHours()
 
-  if (dayOfWeek === 6 || dayOfWeek === 0 || hour >= 9 || hour <= 17) {
+  if (dayOfWeek === 6 || dayOfWeek === 0 || hour >= 11 || hour <= 17) {
     $('.current-time--open').show()
     $('.current-time--closed').hide()
   } else {
@@ -28,3 +28,9 @@ $(document).ready(function () {
     $('.current-time--closed').show()
   }
 })
+
+// $(document).scroll(function () {
+//   if ($(document).scrollTop() > 100) {
+//     $('.mainContent').toggleClass('margin-top')
+//   }
+// })

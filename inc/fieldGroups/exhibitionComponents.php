@@ -35,7 +35,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 ]
             ],
             [
-                'label' => __('Date', 'flynt'),
+                'label' => __('Date Start', 'flynt'),
                 'name' => 'postDate',
                 'type' => 'date_picker',
                 'wrapper' => [
@@ -43,13 +43,21 @@ add_action('Flynt/afterRegisterComponents', function () {
                 ],
             ],
             [
-                'label' => __('Time', 'flynt'),
-                'name' => 'postTime',
-                'type' => 'time_picker',
+                'label' => __('Date End', 'flynt'),
+                'name' => 'postDateEnd',
+                'type' => 'date_picker',
                 'wrapper' => [
                     'width' => '25',
                 ],
-            ]
+            ],
+            // [
+            //     'label' => __('Time', 'flynt'),
+            //     'name' => 'postTime',
+            //     'type' => 'time_picker',
+            //     'wrapper' => [
+            //         'width' => '25',
+            //     ],
+            // ]
         ],
         'location' => [
             [

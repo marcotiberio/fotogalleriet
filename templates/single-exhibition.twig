@@ -8,8 +8,8 @@
         <div class="artist">{{ post.subtitle }}</div>
         <div class="info">
           <span>{{ post.postType }}</span>
-          <span>{{ post.postDate|date("d.m.Y") }}</span>
-          <span>{{ post.postTime|date("g:i") }}</span>
+          <span>From {{ post.postDate|date("d.m.Y") }}</span>
+          <span>To {{ post.postDateEnd|date("d.m.Y") }}</span>
         </div>
         </div>
       {% for component in post.meta('exhibitionComponents') %}
@@ -17,7 +17,7 @@
       {% endfor %}
     </section>
     <section class="post-related">
-      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h3>' ~ __('Related Posts') ~ '</h3>','taxonomies': post.categories(), 'options': {'columns': 4}}) }}
+      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h3>' ~ __('You might also like ') ~ '</h3>','taxonomies': post.categories(), 'options': {'columns': 4}}) }}
     </section>
   </article>
 {% endblock %}

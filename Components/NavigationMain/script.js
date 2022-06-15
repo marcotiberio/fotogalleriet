@@ -16,8 +16,10 @@ class NavigationMain extends window.HTMLElement {
 
   resolveElements () {
     this.$window = $(window)
+    this.$container = $('.container', this)
     this.$nav = $('.menu-item', this)
     this.$logologo = $('.logologo-image', this)
+    this.$language = $('.language-switcher', this)
   }
 
   bindFunctions () {
@@ -34,9 +36,11 @@ class NavigationMain extends window.HTMLElement {
     if ($scroll > 0) {
       this.$nav.slideUp()
       this.$logologo.slideUp()
+      this.$language.hide()
     } else {
       this.$nav.slideDown()
       this.$logologo.slideDown()
+      this.$language.show()
     }
   }
 }
