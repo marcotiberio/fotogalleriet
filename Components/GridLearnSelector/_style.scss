@@ -12,7 +12,7 @@
       }
 
       .separator {
-        border-bottom: 1px solid $black;
+        border-bottom: 1px solid #000;
         flex-grow: 2;
       }
     }
@@ -68,7 +68,7 @@
       height: 100%;
 
       &-image {
-        border: 1px solid $black;
+        border: 2px solid $black;
         height: fit-content;
         object-fit: cover;
         width: 100%;

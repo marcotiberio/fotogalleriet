@@ -15,12 +15,26 @@ $(document).ready(function () {
   })
 })
 
-$(document).ready(function () {
-  var d = new Date()
-  var dayOfWeek = d.getDay()
-  var hour = d.getHours()
+// $(document).ready(function () {
+//   var d = new Date()
+//   var dayOfWeek = d.getDay()
+//   var hour = d.getHours()
 
-  if (dayOfWeek === 6 || dayOfWeek === 0 || hour >= 11 || hour <= 17) {
+//   if (dayOfWeek === 6 || dayOfWeek === 0 || hour >= 11 || hour <= 17) {
+//     $('.current-time--open').show()
+//     $('.current-time--closed').hide()
+//   } else {
+//     $('.current-time--open').hide()
+//     $('.current-time--closed').show()
+//   }
+// })
+
+$(document).ready(function () {
+  var start = new Date()
+  var end = new Date()
+  var time = new Date().getTime()
+
+  if (time > start.setHours(12) && time < end.setHours(18)) {
     $('.current-time--open').show()
     $('.current-time--closed').hide()
   } else {
@@ -28,9 +42,3 @@ $(document).ready(function () {
     $('.current-time--closed').show()
   }
 })
-
-// $(document).scroll(function () {
-//   if ($(document).scrollTop() > 100) {
-//     $('.mainContent').toggleClass('margin-top')
-//   }
-// })

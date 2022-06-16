@@ -146,7 +146,7 @@ figure {
 
 hr {
   background-color: $color-border;
-  border: 1px solid $black;
+  border: 2px solid $black;
   display: block;
   height: 2px;
 }
@@ -655,7 +655,7 @@ select {
 
 .preContent {
   @include reset-content-margins;
-  margin: 0 auto 32px;
+  margin: 0;
   // max-width: $content-max-width;
 
   @media (min-width: $breakpoint-tablet) {
@@ -664,6 +664,12 @@ select {
 
   @media (min-width: $breakpoint-desktop) {
     margin-bottom: $padding-desktop;
+  }
+
+  .separator {
+    border-bottom: 1px solid #000;
+    flex-grow: 2;
+    transform: translateY(-8px);
   }
 }
 

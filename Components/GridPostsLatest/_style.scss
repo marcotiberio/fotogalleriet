@@ -10,7 +10,7 @@
     }
 
     .separator {
-      border-bottom: 1px solid $black;
+      border-bottom: 1px solid #000;
       flex-grow: 2;
     }
   }
@@ -62,7 +62,7 @@
 
     &-image {
       // background: $color-contrast;
-      border: 1px solid $black;
+      border: 2px solid $black;
       flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
       margin-top: $padding-mobile;
     }
@@ -78,7 +78,7 @@
 
       &-top {
         align-items: center;
-        border-bottom: 1px solid $black;
+        border-bottom: 1px solid #000;
         column-gap: 10%;
         display: grid;
         grid-template-columns: 70% 20%;

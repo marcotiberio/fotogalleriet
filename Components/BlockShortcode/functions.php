@@ -18,14 +18,6 @@ function getACFLayout()
                 'endpoint' => 0,
             ],
             [
-                'label' => __('Shortcode ID', 'flynt'),
-                'name' => 'shortcodeID',
-                'type' => 'text',
-                'delay' => 0,
-                'media_upload' => 0,
-                'required' => 0,
-            ],
-            [
                 'label' => __('Content', 'flynt'),
                 'name' => 'contentHtml',
                 'type' => 'wysiwyg',

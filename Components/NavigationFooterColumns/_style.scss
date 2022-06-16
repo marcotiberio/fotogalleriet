@@ -22,13 +22,17 @@
     }
 
     &-menu {
-      background-color: #c6c6c6;
+      background-color: $grey;
       column-gap: $padding-desktop;
       display: grid;
       flex-direction: column;
       grid-template-columns: repeat(3, 1fr);
-      padding: $padding-mobile;
+      padding: $padding-desktop;
       width: 100%;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        padding: $padding-mobile;
+      }
 
       p {
         margin-bottom: 0;
@@ -55,8 +59,12 @@
       flex-direction: column;
       grid-template-columns: repeat(3, 1fr);
       margin: 0;
-      padding: $padding-mobile;
+      padding: $padding-desktop;
       width: 100%;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        padding: $padding-mobile;
+      }
 
       p {
         margin-bottom: 0;
