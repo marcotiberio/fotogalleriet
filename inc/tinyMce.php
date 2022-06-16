@@ -159,8 +159,8 @@ function getConfig()
             'default' => [
                 [
                     'formatselect',
-                    'styleselect',
-                    'forecolor backcolor',
+                    // 'styleselect',
+                    // 'forecolor backcolor',
                     'bold',
                     'italic',
                     '|',
@@ -174,27 +174,40 @@ function getConfig()
                     'unlink',
                     '|',
                     'removeformat',
-                    '|',
-                    'undo',
-                    'redo',
-                    '|',
-                    'nonbreaking',
-                    'fullscreen',
-                    'charmap'
+                    // '|',
+                    // 'undo',
+                    // 'redo',
+                    // '|',
+                    // 'nonbreaking',
+                    // 'fullscreen',
+                    // 'charmap'
                 ]
             ],
             'basic' => [
                 [
+                    'formatselect',
+                    // 'styleselect',
+                    // 'forecolor backcolor',
                     'bold',
                     'italic',
-                    'strikethrough',
+                    '|',
+                    'alignleft',
+                    'aligncenter',
+                    'alignright',
+                    '|',
+                    'bullist',
                     '|',
                     'link',
                     'unlink',
                     '|',
-                    'undo',
-                    'redo',
-                    'fullscreen'
+                    'removeformat',
+                    // '|',
+                    // 'undo',
+                    // 'redo',
+                    // '|',
+                    // 'nonbreaking',
+                    // 'fullscreen',
+                    // 'charmap'
                 ]
             ]
         ]

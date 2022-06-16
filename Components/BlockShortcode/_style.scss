@@ -1,5 +1,9 @@
 [is='flynt-block-shortcode'] {
   padding: $padding-desktop;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    padding: $component-spacing-mobile;
+  }
   
   .content {
     @include reset-content-margins;

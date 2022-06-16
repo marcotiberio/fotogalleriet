@@ -22,6 +22,12 @@
     position: absolute;
     text-align: left;
 
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      bottom: $padding-mobile;
+      left: $padding-mobile;
+      max-width: 100%;
+    }
+
     div {
       color: $white;
     }

@@ -1,15 +1,11 @@
-.searchForm {
+.searchForm {  
   &-field {
     align-items: center;
     background-color: transparent;
     display: flex;
-    flex-flow: row-reverse wrap;
-    height: 40px;
+    flex-flow: row;
+    justify-content: flex-end;
     z-index: 1002;
-
-    @media (max-width: $breakpoint-mobile-horizontal) {
-      flex-direction: row-reverse wrap;
-    }
   }
 
   &-input {
@@ -17,16 +13,15 @@
     background-color: transparent;
     border: 0;
     border-radius: 0;
-    color: #000;
+    color: $black;
     font-family: inherit;
-    font-size: inherit;
-    margin: 0;
-    min-height: auto;
-    padding: 10px 0;
+    margin: 0 0 0 10px;
+    outline: 0;
+    padding: 0;
   }
 
   &-submit {
-    margin-top: 5px;
-    padding: 0 0.5rem;
+    margin-top: 0;
+    padding: 0;
   }
 }

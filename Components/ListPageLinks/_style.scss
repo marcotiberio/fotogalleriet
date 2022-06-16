@@ -24,6 +24,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      column-gap: $padding-mobile * 2;
+    }
+
     li {
       border-bottom: 1px solid $black;
       padding: $padding-mobile 0;

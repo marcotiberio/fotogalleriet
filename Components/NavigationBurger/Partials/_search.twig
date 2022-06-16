@@ -1,9 +1,5 @@
 <form class="searchForm" role="search" action="{{ bloginfo('url') }}">
-  <div class="searchForm-field">
-    <div class="searchForm-box">
-      <label class="visuallyHidden" for="searchForm-input">{{ searchPlaceholder }}</label>
-      <input name="s" id="searchForm-input" class="searchForm-input" type="search" required placeholder="Search" value="{{ searchQuery }}">
-    </div>
+  <div class="searchForm-field h4">
     <button class="searchForm-submit" type="submit">
       <svg xmlns="http://www.w3.org/2000/svg" width="14.187" height="14.854" viewBox="0 0 14.187 14.854">
         <g id="icons-search-black" transform="translate(0 0.5)">
@@ -15,5 +11,9 @@
         </g>
       </svg>
     </button>
+    <div class="searchForm-box">
+      <label class="visuallyHidden" for="searchForm-input">{{ searchPlaceholder }}</label>
+      <input name="s" id="searchForm-input" class="searchForm-input h4" type="search" required placeholder="Search" value="{{ searchQuery }}">
+    </div>
   </div>
 </form>
