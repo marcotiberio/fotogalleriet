@@ -146,9 +146,9 @@ figure {
 
 hr {
   background-color: $color-border;
-  border: 2px solid $black;
+  border: 1px solid $black;
   display: block;
-  height: 2px;
+  height: 1px;
 }
 
 img {
@@ -338,7 +338,7 @@ button {
   &--link {
     background-color: transparent;
     border: 0;
-    color: $color-accent;
+    color: $black;
     padding: 0;
     position: relative;
     text-transform: none;
@@ -347,10 +347,10 @@ button {
     &:hover,
     &:focus {
       background-color: transparent;
-      color: $color-background-dark;
+      color: $black;
 
       &::before {
-        background-color: $color-background-dark;
+        background-color: transparent;
       }
 
       &::after {
@@ -359,7 +359,7 @@ button {
     }
 
     &::before {
-      background-color: $color-accent;
+      background-color: $black;
       bottom: 0;
       content: '';
       height: 1px;
@@ -369,21 +369,21 @@ button {
       width: 100%;
     }
 
-    &::after {
-      $color-accent-rgb: red($color-accent), green($color-accent), blue($color-accent);
-      $color-background-dark-rgb: red($color-background-dark), green($color-background-dark), blue($color-background-dark);
+    // &::after {
+    //   $color-accent-rgb: red($color-accent), green($color-accent), blue($color-accent);
+    //   $color-background-dark-rgb: red($color-background-dark), green($color-background-dark), blue($color-background-dark);
 
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.586 5L.293 8.293a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4A1 1 0 1 0 .293 1.707L3.586 5z' fill='rgb(#{$color-accent-rgb})'/%3E%3Cpath d='M13.586 5l-3.293 3.293a1 1 0 0 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414L13.586 5z' fill='rgb(#{$color-background-dark-rgb})'/%3E%3C/svg%3E");
-      background-position: left center;
-      background-repeat: no-repeat;
-      content: '';
-      display: inline-block;
-      height: 10px;
-      margin-left: 10px;
-      transition: background-position 0.2s ease-out;
-      vertical-align: baseline;
-      width: 6px;
-    }
+    //   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.586 5L.293 8.293a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4A1 1 0 1 0 .293 1.707L3.586 5z' fill='rgb(#{$color-accent-rgb})'/%3E%3Cpath d='M13.586 5l-3.293 3.293a1 1 0 0 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414L13.586 5z' fill='rgb(#{$color-background-dark-rgb})'/%3E%3C/svg%3E");
+    //   background-position: left center;
+    //   background-repeat: no-repeat;
+    //   content: '';
+    //   display: inline-block;
+    //   height: 10px;
+    //   margin-left: 10px;
+    //   transition: background-position 0.2s ease-out;
+    //   vertical-align: baseline;
+    //   width: 6px;
+    // }
   }
 }
 

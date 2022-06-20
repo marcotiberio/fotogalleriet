@@ -1,19 +1,16 @@
 {% if posts|length > 0 %}
-  <ul class="searchList boxShadow themeReset">
+  <div class="searchList">
     {% for post in posts  %}
-      <li class="searchList-item boxPadding">
+      <a class="searchList-item" href="{{ post.link }}">
         <article class="post">
-          <h2 class="h3"><a href="{{ post.link }}">{{ post.title }}</a></h2>
-          <p>{{ post.preview.length(40).read_more(false) }}</p>
-          <footer class="post-footer">
-            <a href="{{ post.link }}" class="button button--link" aria-hidden="true" tabindex="-1">{{ labels.readMore }}</a>
-          </footer>
+          <div class="h3">{{ post.title }}</div>
+          {# <p>{{ post.preview.length(40).read_more(false) }}</p> #}
         </article>
-      </li>
+      </a>
     {% endfor %}
-  </ul>
+  </div>
 {% else %}
-  <div class="noResults boxPadding">
+  <div class="noResults">
     <p>{{ labels.noResults }}</p>
   </div>
 {% endif %}

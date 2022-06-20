@@ -1,20 +1,36 @@
 .searchList {
-  @include reset-list;
-  border-radius: 4px;
-  margin-top: 20px;
+  column-gap: $gap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin-top: 40px;
+  padding: 0;
+  row-gap: $gap;
 
   &-item {
-    border-bottom: 1px solid #ececec;
+    border: 2px solid $black;
+    display: flex;
+    padding: 20px;
     position: relative;
 
-    &:last-child {
-      border: 0;
+    &:hover,
+    &:focus {
+      background-color: $black;
+
+      .h3 {
+        color: $white !important;
+      }
     }
   }
 }
 
 .post {
   @include reset-content-margins;
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 100%;
 
   &-footer {
     text-align: right;
@@ -23,5 +39,6 @@
 
 .noResults {
   margin-top: 20px;
+  padding: 20px;
   text-align: center;
 }
