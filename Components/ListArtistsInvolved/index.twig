@@ -1,0 +1,31 @@
+<div class="flyntComponent componentSpacing" is="flynt-list-artists-involved">
+  <div class="container">
+    <div class="left">
+      {% if preContentTitle %}
+      <div class="preContent">
+        <div class="preContentTitle">
+          <h3>{{ preContentTitle }}</h3>
+          <div class="separator"></div>
+        </div>
+      </div>
+      {% endif %}
+      {% if pageLinksRepeater %}
+        <ul class="pageLinksList">
+          {% for panel in pageLinksRepeater %}
+            <li>
+              <a class="pageLinksList-link" href="{{ panel.pageLink.url }}">
+                <div class="when h3">{{ panel.pageWhen }}</div>
+                <div class="link h4">What</div>
+                <div class="what h3">{{ panel.pageLinkTitle }}</div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+    <div class="right">
+      <div class="h3">{{ contentHtml|e('wp_kses_post') }}</div>
+      <a class="link h3" href="{{ textLink.url }}" target="{{ textLink.target }}" rel="noopener noreferrer">{{ textLink.title }}</a>
+    </div>
+  </div>
+</div>

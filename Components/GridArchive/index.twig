@@ -1,4 +1,4 @@
-<div class="flyntComponent" is="flynt-grid-image-text">
+<div class="flyntComponent" is="flynt-grid-archive">
   <div class="container">
     {% if preContentHtml %}
       <div class="preContent">
@@ -7,9 +7,9 @@
     {% endif %}
     <ul class="grid">
       {% for item in items %}
-        {% if item.image or item.contentHtml or item.contentLink %}
+        {% if item.image or item.pageLink %}
           <li class="grid-item">
-            <a class="" href="{{ item.contentLink|e }}">
+            <a class="h3" href="{{ item.pageLink }}">
               <div class="content">
                 {% if item.image %}
                   <img class="content-image lazyload"
@@ -20,9 +20,7 @@
                     alt="{{ item.image.alt|e }}">
                 {% endif %}
                 {% if item.contentTitle %}
-                  <div class="content-inner">
-                    <p>{{ item.contentTitle|e }}</p>
-                  </div>
+                  <div class="content-inner">{{ item.contentTitle|e }}</div>
                 {% endif %}
               </div>
             </a>

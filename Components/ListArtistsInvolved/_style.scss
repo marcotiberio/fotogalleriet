@@ -1,0 +1,98 @@
+[is='flynt-list-artists-involved'] {
+  .container {
+    column-gap: $gap;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      grid-template-columns: 1fr;
+    }
+
+    .left {
+      .preContent {
+        &Title {
+          display: flex;
+          flex-flow: row wrap;
+          margin-bottom: $padding-mobile;
+    
+          h3 {
+            margin-bottom: 0;
+            margin-right: $padding-mobile;
+            max-width: 50%;
+          }
+    
+          .separator {
+            border-bottom: 1px solid #000;
+            flex-grow: 2;
+          }
+        }
+      }
+  
+      .pageLinksList {
+        display: flex;
+        flex-flow: column wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          column-gap: $padding-mobile * 2;
+        }
+    
+        li {
+          border-bottom: 1px solid #000;
+          padding: $padding-mobile 0;
+          width: 100%; 
+        }
+    
+        &-link {
+          align-items: flex-start;
+          display: flex;
+          flex-flow: row;
+          justify-content: space-between;
+          margin: 0;
+          width: 100%;
+
+          .h3 {
+            margin: 0;
+          }
+
+          .when {
+            font-weight: 400;
+            text-transform: uppercase;
+            width: 30%;
+          }
+
+          .link {
+            width: 30%;
+          }
+
+          .what {
+            width: 40%;
+          }
+        }
+      }
+    }
+
+    .right {
+      background-color: rgba(198, 198, 198, 0.5);
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      margin-top: 1.75rem;
+      padding: $padding-mobile;
+
+      .link {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+
+        &::after {
+          content: '→';
+          margin-left: 10px;
+        }
+      }
+    }
+    
+  }
+}

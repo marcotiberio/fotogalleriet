@@ -5,6 +5,7 @@
     &-main {
       display: flex;
       flex-flow: column wrap;
+      padding-top: $padding-desktop;
 
       .flyntComponent--sliderBanner {
         order: -1;

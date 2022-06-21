@@ -1,6 +1,5 @@
 [is='flynt-block-spacer'] {
   background-color: $black;
-  height: 2px;
   margin-bottom: $component-spacing-desktop;
   margin-left: $component-spacing-desktop;
   margin-top: $component-spacing-desktop;
@@ -11,5 +10,13 @@
     margin-left: $component-spacing-mobile;
     margin-top: $component-spacing-mobile;
     width: calc(100vw - 40px);
+  }
+
+  &.lineYes {
+    height: 2px;
+  }
+
+  &.lineNo {
+    height: 0;
   }
 }

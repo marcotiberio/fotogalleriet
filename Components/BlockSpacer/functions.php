@@ -20,6 +20,22 @@ function getACFLayout()
                     'esc_html' => 1
                 ],
             ],
+            [
+                'label' => __('Line', 'flynt'),
+                'name' => 'line',
+                'type' => 'radio',
+                'other_choice' => 0,
+                'save_other_choice' => 0,
+                'layout' => 'horizontal',
+                'choices' => [
+                    'lineYes' => __('Yes', 'flynt'),
+                    'lineNo' => __('No', 'flynt'),
+                ],
+                'default_value' => 'lineYes',
+                'wrapper' =>  [
+                    'width' => '100',
+                ],
+            ],
         ]
     ];
 }

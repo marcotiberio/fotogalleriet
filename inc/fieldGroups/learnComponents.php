@@ -97,6 +97,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\GridImageGallery\getACFLayout(),
                     Components\GridImageText\getACFLayout(),
                     Components\GridPostsSelector\getACFLayout(),
+                    Components\ListArtistsInvolved\getACFLayout(),
                     Components\ListLogos\getACFLayout(),
                     Components\ListPageLinks\getACFLayout(),
                 ],

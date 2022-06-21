@@ -1,4 +1,11 @@
 {
+  "Components/ListArtistsInvolved/Assets/facebook.svg": "Components/ListArtistsInvolved/Assets/facebook-59680163b5.svg",
+  "Components/ListArtistsInvolved/Assets/instagram.svg": "Components/ListArtistsInvolved/Assets/instagram-16d4019372.svg",
+  "Components/ListArtistsInvolved/Assets/linkedin.svg": "Components/ListArtistsInvolved/Assets/linkedin-9bcc5778c4.svg",
+  "Components/ListArtistsInvolved/Assets/mail.svg": "Components/ListArtistsInvolved/Assets/mail-4b76b6943d.svg",
+  "Components/ListArtistsInvolved/Assets/twitter.svg": "Components/ListArtistsInvolved/Assets/twitter-65b7f849b2.svg",
+  "Components/ListArtistsInvolved/Assets/xing.svg": "Components/ListArtistsInvolved/Assets/xing-d0faa4294a.svg",
+  "Components/ListArtistsInvolved/Assets/youtube.svg": "Components/ListArtistsInvolved/Assets/youtube-5ed41aaa24.svg",
   "Components/ListPageLinks/Assets/facebook.svg": "Components/ListPageLinks/Assets/facebook-59680163b5.svg",
   "Components/ListPageLinks/Assets/instagram.svg": "Components/ListPageLinks/Assets/instagram-16d4019372.svg",
   "Components/ListPageLinks/Assets/linkedin.svg": "Components/ListPageLinks/Assets/linkedin-9bcc5778c4.svg",
@@ -24,7 +31,7 @@
   "Components/NavigationFooterColumns/Assets/youtube.svg": "Components/NavigationFooterColumns/Assets/youtube-3b8f2b7f41.svg",
   "Components/NavigationLanguage/Assets/logo.svg": "Components/NavigationLanguage/Assets/logo-4627cdfa7d.svg",
   "Components/NavigationMain/Assets/logo.svg": "Components/NavigationMain/Assets/logo-4627cdfa7d.svg",
-  "assets/admin.css": "assets/admin-ef38dba152.css",
+  "assets/admin.css": "assets/admin-277f8af28a.css",
   "assets/admin.js": "assets/admin-7d78182351.js",
   "assets/admin.js.LICENSE.txt": "assets/admin-23200fb757.js.LICENSE.txt",
   "assets/fonts/Plain-Regular.woff2": "assets/fonts/Plain-Regular-889832c1ad.woff2",
@@ -38,7 +45,7 @@
   "assets/fonts/montserrat-v14-latin-regular.woff2": "assets/fonts/montserrat-v14-latin-regular-bc3aa95dca.woff2",
   "assets/icons/check-circle.svg": "assets/icons/check-circle-98401bcdb9.svg",
   "assets/icons/spinner.svg": "assets/icons/spinner-2e5c842fc5.svg",
-  "assets/main.css": "assets/main-83df0a042e.css",
+  "assets/main.css": "assets/main-1347813720.css",
   "assets/main.js": "assets/main-5bb96e41a4.js",
   "assets/main.js.LICENSE.txt": "assets/main-957f80e714.js.LICENSE.txt"
 }

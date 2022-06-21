@@ -46,6 +46,11 @@
       flex-flow: row wrap;
       justify-content: flex-start;
       margin: 0 0 0 ($gap * -1);
+      padding: $padding-desktop;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        padding: $padding-mobile;
+      }
 
       &--columns2,
       &--columns3,

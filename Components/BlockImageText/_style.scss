@@ -1,6 +1,10 @@
 [is='flynt-block-image-text'] {
   .container {
-    // @include center(500px + 2 * $padding-mobile);
+    padding: $padding-desktop;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      padding: $padding-mobile;
+    }
   }
 
   .box-inner {
