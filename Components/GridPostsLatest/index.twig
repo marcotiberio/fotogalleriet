@@ -15,12 +15,20 @@
                 <div class="content-inner">
                   <div class="content-inner-top">
                     <div class="content-inner-top--left">
+                      {% if item.postType %}
                       <span>{{ item.postType }}</span>
+                      {% endif %}
+                      {% if item.postTime %}
                       <span>{{ item.postTime|date("g:i") }}</span>
+                      {% endif %}
                     </div>
                     <div class="content-inner-top--right">
+                      {% if item.postDate %}
                       <span>{{ item.postDate|date("n") }}</span>
+                      {% endif %}
+                      {% if item.postDate %}
                       <span>{{ item.postDate|date("M") }}</span>
+                      {% endif %}
                     </div>
                   </div>
                   <div class="content-inner-bottom">

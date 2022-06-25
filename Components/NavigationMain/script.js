@@ -37,10 +37,12 @@ class NavigationMain extends window.HTMLElement {
       this.$nav.slideUp()
       this.$logologo.slideUp()
       this.$language.hide()
+      this.$container.css('paddingBottom', '5px')
     } else {
       this.$nav.slideDown()
       this.$logologo.slideDown()
       this.$language.show()
+      this.$container.css('paddingBottom', '20px')
     }
   }
 }

@@ -20,6 +20,8 @@
     border-radius: 0;
     color: $black;
     font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin: 0 0 0 10px;
     min-height: 1.75rem;
     outline: 0;
@@ -29,5 +31,9 @@
   &-submit {
     margin-top: 0;
     padding: 0;
+  }
+
+  svg {
+    margin-top: 3px;
   }
 }

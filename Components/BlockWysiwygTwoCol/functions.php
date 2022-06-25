@@ -109,6 +109,15 @@ function getACFLayout()
                 'endpoint' => 0,
             ],
             [
+                'label' => '',
+                'name' => 'options',
+                'type' => 'group',
+                'layout' => 'row',
+                'sub_fields' => [
+                    FieldVariables\getSectionId(),
+                ]
+            ],
+            [
                 'label' => __('Background Color', 'flynt'),
                 'name' => 'backgroundColor',
                 'type' => 'color_picker'

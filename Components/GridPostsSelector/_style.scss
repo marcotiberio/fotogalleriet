@@ -84,7 +84,7 @@
   }
 
   .grid-item {
-    max-width: 675px;
+    flex-grow: 1;
     padding: $gap 0 0 $gap;
     width: 100%;
 

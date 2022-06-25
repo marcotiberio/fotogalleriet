@@ -25,6 +25,15 @@ function getTheme()
     ];
 }
 
+function getSectionId()
+{
+    return [
+        'label' => __('Section ID', 'flynt'),
+        'name' => 'sectionId',
+        'type' => 'text'
+    ];
+}
+
 function getIcon()
 {
     return [

@@ -47,7 +47,12 @@
         margin-bottom: 0;
       }
 
-      
+      a {
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
     }
 
     &-info {
@@ -76,6 +81,16 @@
 
       p {
         margin-bottom: 0;
+      }
+
+      a {
+        color: $white;
+
+        &:hover,
+        &:focus {
+          color: $white;
+          text-decoration: underline;
+        }
       }
     }
   }
