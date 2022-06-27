@@ -1,0 +1,73 @@
+[is='flynt-grid-bookshop'] {
+  .preContent {
+    display: flex;
+    flex-flow: row wrap;
+
+    h4 {
+      margin-bottom: 0;
+      margin-right: $padding-mobile;
+      max-width: 20%;
+    }
+
+    .separator {
+      border-bottom: 1px solid #000;
+      flex-grow: 2;
+      margin-left: $padding-mobile;
+    }
+  }
+
+  .grid {
+    column-gap: $gap;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: $padding-desktop;
+    row-gap: $gap;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      grid-template-columns: repeat(3, 1fr);
+      padding: $padding-mobile;
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      grid-template-columns: 1fr;
+      padding: $padding-mobile;
+    }
+  }
+
+  .grid-item {
+    width: 100%;
+  }
+
+  .content {
+    // background-color: #cecece;
+    height: 100%;
+
+    &-inner {
+      @include reset-content-margins;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      padding: $gap 0 $gap*2 0;
+
+      &--author {
+        border-bottom: 2px solid $black;
+        margin-bottom: 0.9rem;
+        padding-bottom: 0.9rem;
+      }
+
+      &--price {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .h5 {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

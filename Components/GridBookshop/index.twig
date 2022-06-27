@@ -1,0 +1,38 @@
+<div class="flyntComponent boxPadding" is="flynt-grid-bookshop">
+  <div class="container">
+    {% if preContentHtml %}
+        <div class="preContent h3">
+          {{ preContentHtml|e('wp_kses_post') }}
+          <div class="separator"></div>
+        </div>
+      {% endif %}
+    <ul class="grid">
+      {% for item in items %}
+        {% if item.image or item.contentHtml or item.contentLink %}
+          <li class="grid-item">
+            {% if item.contentTitle %}
+              <div class="content-inner">
+                <div class="content-inner--title h5">{{ item.contentTitle|e }}</div>
+                <div class="content-inner--author p">{{ item.contentAuthor|e }}</div>
+                <div class="content-inner--price">
+                  <div class="h5">{{ item.contentPrice|e }}</div>
+                  <a class="p" href="{{ item.contentLink|e }}">BUY</a>
+                </div>
+              </div>
+            {% endif %}
+            <div class="content">
+              {% if item.image %}
+                <img class="content-image lazyload"
+                  src="{{ item.image.src|resizeDynamic(500) }}"
+                  srcset="{{ placeholderImage(500, 500 / item.image.aspect) }}"
+                  data-srcset="{{ function('wp_get_attachment_image_srcset', item.image.id) }}"
+                  data-sizes="auto"
+                  alt="{{ item.image.alt|e }}">
+              {% endif %}
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>

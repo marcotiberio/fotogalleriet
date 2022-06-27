@@ -21,7 +21,7 @@ function getACFLayout()
 {
     return [
         'name' => 'GridVisitorsSelector',
-        'label' => 'Grid: Visitors Selector',
+        'label' => 'Grid: Visitor/Artist Selector',
         'sub_fields' => [
             [
                 'label' => __('Title', 'flynt'),
@@ -34,6 +34,12 @@ function getACFLayout()
                 'label' => __('Title', 'flynt'),
                 'name' => 'preContentTitle',
                 'type' => 'text'
+            ],
+            [
+                'label' => __('Link to archive page', 'flynt'),
+                'name' => 'archiveLink',
+                'type' => 'link',
+                'return_format' => 'url'
             ],
             [
                 'label' => __('Intro', 'flynt'),
@@ -55,9 +61,10 @@ function getACFLayout()
                 'label' => __('Post', 'flynt'),
                 'name' => 'post',
                 'type' => 'relationship',
-                'post_type' => [
+                'post_type' => array (
                     'visitor',
-                ],
+                    'artist',
+                ),
                 // 'filters' => array(
                 //     0 => 'search',
                 //     1 => 'post_type',

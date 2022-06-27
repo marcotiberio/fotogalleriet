@@ -33,6 +33,11 @@
         grid-template-columns: repeat(2, 1fr);
         padding: $padding-mobile;
       }
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        grid-template-columns: 1fr;
+        padding: $padding-mobile;
+      }
     }
 
     &--columns3 {
@@ -42,6 +47,11 @@
         grid-template-columns: repeat(2, 1fr);
         padding: $padding-mobile;
       }
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        grid-template-columns: 1fr;
+        padding: $padding-mobile;
+      }
     }
 
     &--columns4 {
@@ -49,6 +59,11 @@
 
       @media (max-width: $breakpoint-tablet-horizontal) {
         grid-template-columns: repeat(2, 1fr);
+        padding: $padding-mobile;
+      }
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        grid-template-columns: 1fr;
         padding: $padding-mobile;
       }
     }
