@@ -33,12 +33,21 @@ $(document).ready(function () {
   var start = new Date()
   var end = new Date()
   var time = new Date().getTime()
+  var day = new Date().getDay()
 
-  if (time > start.setHours(12) && time < end.setHours(18)) {
-    $('.current-time--open').show()
-    $('.current-time--closed').hide()
-  } else {
+  if (time > start.setHours(12) && time < end.setHours(17) && (day === 1)) {
     $('.current-time--open').hide()
     $('.current-time--closed').show()
+  } else {
+    $('.current-time--open').show()
+    $('.current-time--closed').hide()
+  }
+
+  if (time > start.setHours(12) && time < end.setHours(17) && (day === 2)) {
+    $('.current-time--open').hide()
+    $('.current-time--closed').show()
+  } else {
+    $('.current-time--open').show()
+    $('.current-time--closed').hide()
   }
 })
