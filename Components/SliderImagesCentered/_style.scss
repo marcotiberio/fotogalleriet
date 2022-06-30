@@ -1,4 +1,6 @@
 [is='flynt-slider-images-centered'] {
+  padding: $padding-mobile 0;
+
   .slider {
     &-item {
       max-width: 375px;

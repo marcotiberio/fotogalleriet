@@ -7,13 +7,13 @@
       flex-flow: column wrap;
 
       .flyntComponent {
-        &--sliderBanner {
-          order: -1;
-        }
-
         &--imageBanner {
           order: -1;
         }
+      }
+
+      .exhibition-title {
+        margin-top: 40px !important;
       }
       
       .exhibition-meta {

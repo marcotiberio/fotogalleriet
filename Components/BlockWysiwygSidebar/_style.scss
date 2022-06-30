@@ -5,7 +5,7 @@
     @media (min-width: $breakpoint-mobile-horizontal) {
       column-gap: $padding-desktop * 2;
       display: grid;
-      grid-template-columns: 1fr 4fr;
+      grid-template-columns: 20% 50% 20%;
     }
   }
 
