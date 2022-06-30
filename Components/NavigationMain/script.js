@@ -33,7 +33,7 @@ class NavigationMain extends window.HTMLElement {
   offsetNav (e) {
     const $scroll = this.$window.scrollTop()
 
-    if ($scroll > 0) {
+    if ($scroll > 100) {
       this.$nav.slideUp()
       this.$logologo.slideUp()
       this.$language.hide()

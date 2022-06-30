@@ -50,14 +50,14 @@ add_action('Flynt/afterRegisterComponents', function () {
                     'width' => '25',
                 ],
             ],
-            // [
-            //     'label' => __('Time', 'flynt'),
-            //     'name' => 'postTime',
-            //     'type' => 'time_picker',
-            //     'wrapper' => [
-            //         'width' => '25',
-            //     ],
-            // ]
+            [
+                'label' => __('Time', 'flynt'),
+                'name' => 'postTime',
+                'type' => 'time_picker',
+                'wrapper' => [
+                    'width' => '25',
+                ],
+            ]
         ],
         'location' => [
             [
