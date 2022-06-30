@@ -3,8 +3,7 @@
     {% for post in posts  %}
       <a class="searchList-item" href="{{ post.link }}">
         <article class="post">
-          <div class="h3">{{ post.title }}</div>
-          {# <p>{{ post.preview.length(40).read_more(false) }}</p> #}
+          <div class="post-title h3">{{ post.title }}</div>
         </article>
       </a>
     {% endfor %}
