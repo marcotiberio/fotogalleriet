@@ -1,24 +1,33 @@
 /* Custom styling for online exhibition posts */
 
 .single-onlinexhibition {
-  header {
+  .digital-header {
     align-items: center;
+    border-bottom: 2px solid $black;
     display: flex;
     flex-flow: column wrap;
-    height: calc(100vh - 50px);
+    height: auto;
     justify-content: center;
-    text-align: center;
-    width: 100vw;
-  }
+    padding: $component-spacing-desktop;
 
-  .mainContent {
-    .flyntComponent {
-      height: calc(100vh - 50px);
-      width: 100vw;
+    @media (min-width: $breakpoint-desktop) {
+      height: calc(100vh - 205px);
+    }
+
+    .exhibition-title {
+      text-align: center;
+
+      @media (min-width: $breakpoint-desktop) {
+        max-width: 70%;
+      }
     }
   }
 
-  .mainFooter {
-    display: none;
+  .post-related {
+    margin-top: 0;
   }
+
+  // .mainFooter {
+  //   display: none;
+  // }
 }

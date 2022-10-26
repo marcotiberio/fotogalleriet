@@ -1,0 +1,23 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  <article class="post">
+    <section class="post-main">
+      <h1 class="exhibition-title componentSpacing">{{ post.title }}</h1>
+      <div class="exhibition-meta componentSpacing">
+        <div class="artist">{{ post.subtitle }}</div>
+        <div class="info">
+          <span>{{ post.postType }}</span>
+          {% if post.postDate %}<span>From {{ post.postDate|date("d.m.Y") }}</span>{% endif %}
+          {% if post.postDateEnd %}<span>To {{ post.postDateEnd|date("d.m.Y") }}</span>{% endif %}
+        </div>
+        </div>
+      {% for component in post.meta('eventComponents') %}
+        {{ renderComponent(component) }}
+      {% endfor %}
+    </section>
+    <section class="post-related">
+      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h3>' ~ __('You might also like ') ~ '</h3>','taxonomies': post.categories(), 'options': {'columns': 4}}) }}
+    </section>
+  </article>
+{% endblock %}

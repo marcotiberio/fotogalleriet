@@ -75,10 +75,7 @@ function getConfig()
             'Paragraph' => 'p',
             'Heading 1' => 'h1',
             'Heading 2' => 'h2',
-            'Heading 3' => 'h3',
-            'Heading 4' => 'h4',
-            'Heading 5' => 'h5',
-            'Heading 6' => 'h6'
+            'Heading 3' => 'h3'
         ],
         'styleformats' => [
             [
@@ -100,21 +97,21 @@ function getConfig()
                         'classes' => 'h3',
                         'selector' => '*'
                     ],
-                    [
-                        'title' => 'Heading 4',
-                        'classes' => 'h4',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 5',
-                        'classes' => 'h5',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 6',
-                        'classes' => 'h6',
-                        'selector' => '*'
-                    ],
+                    // [
+                    //     'title' => 'Heading 4',
+                    //     'classes' => 'h4',
+                    //     'selector' => '*'
+                    // ],
+                    // [
+                    //     'title' => 'Heading 5',
+                    //     'classes' => 'h5',
+                    //     'selector' => '*'
+                    // ],
+                    // [
+                    //     'title' => 'Heading 6',
+                    //     'classes' => 'h6',
+                    //     'selector' => '*'
+                    // ],
                 ]
             ],
             [
@@ -131,27 +128,16 @@ function getConfig()
                         'classes' => 'button--ghost',
                         'selector' => '.button'
                     ],
-                    [
-                        'title' => 'Button Small',
-                        'classes' => 'button--small',
-                        'selector' => '.button'
-                    ],
-                    [
-                        'title' => 'Button Link',
-                        'classes' => 'button--link',
-                        'selector' => '.button'
-                    ]
-                ]
-            ],
-            [
-                'title' => 'Icon Lists',
-                'icon' => '',
-                'items' => [
-                    [
-                        'title' => 'Check Circle',
-                        'classes' => 'iconList iconList--checkCircle',
-                        'selector' => 'ul,ol'
-                    ]
+                    // [
+                    //     'title' => 'Button Small',
+                    //     'classes' => 'button--small',
+                    //     'selector' => '.button'
+                    // ],
+                    // [
+                    //     'title' => 'Button Link',
+                    //     'classes' => 'button--link',
+                    //     'selector' => '.button'
+                    // ]
                 ]
             ]
         ],

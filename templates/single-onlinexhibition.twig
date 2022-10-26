@@ -2,25 +2,18 @@
 
 {% block content %}
   <article class="post">
-    <header>
-      <h3>{{ post.type.labels.singular_name }}<h3>
-      <h1 class="exhibition-title componentSpacing">{{ post.artist }}</h1>
+    <section class="digital-header" style="background-color: {{ post.backgroundColor }};">
+      <h3>{{ post.type.labels.singular_name }}</h3>
+      <h1 class="exhibition-title componentSpacing">{{ post.subtitle }}</h1>
       <h3>{{ post.title }}<h3>
-    </header>
+    </section>
     <section class="post-main">
-      
-        <div class="info">
-          {# <span>{{ post.postType }}</span>
-          <span>{{ post.postDate|date("d.m.Y") }}</span>
-          <span>{{ post.postTime|date("g:i") }}</span> #}
-        </div>
-        </div>
       {% for component in post.meta('onlinexhibitionComponents') %}
         {{ renderComponent(component) }}
       {% endfor %}
     </section>
-    {# <section class="post-related">
+    <section class="post-related">
       {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h3>' ~ __('Related Posts') ~ '</h3>','taxonomies': post.categories(), 'options': {'columns': 4}}) }}
-    </section> #}
+    </section>
   </article>
 {% endblock %}

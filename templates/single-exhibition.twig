@@ -6,11 +6,11 @@
       <h1 class="exhibition-title componentSpacing">{{ post.title }}</h1>
       <div class="exhibition-meta componentSpacing">
         <div class="artist">{{ post.subtitle }}</div>
-        <div class="info">
-          <span>{{ post.postType }}</span>
-          <span>From {{ post.postDate|date("d.m.Y") }}</span>
-          <span>To {{ post.postDateEnd|date("d.m.Y") }}</span>
-        </div>
+          <div class="info">
+            <span>{{ post.postType }}</span>
+            {% if post.postDate %}<span>From {{ post.postDate|date("d.m.Y") }}</span>{% endif %}
+            {% if post.postDateEnd %}<span>To {{ post.postDateEnd|date("d.m.Y") }}</span>{% endif %}
+          </div>
         </div>
       {% for component in post.meta('exhibitionComponents') %}
         {{ renderComponent(component) }}

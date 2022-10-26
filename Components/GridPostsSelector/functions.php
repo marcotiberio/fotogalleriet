@@ -58,6 +58,7 @@ function getACFLayout()
                 'post_type' => [
                     'post',
                     'exhibition',
+                    'onlinexhibition',
                     'interview',
                     'learn',
                     'artist',

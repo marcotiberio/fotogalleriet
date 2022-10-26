@@ -1,4 +1,7 @@
-[is='flynt-online-exhibition'] {
+[is='flynt-slider-images-digital'] {
+  padding: $component-spacing-desktop;
+  width: 100vw;
+
   .slider {
     max-width: 800px;
     position: relative;
@@ -12,8 +15,8 @@
 
     &-button {
       align-items: center;
-      background-color: rgba($color-background-dark, 0.5);
-      border-radius: 50%;
+      background-color: $white;
+      border-radius: 0;
       cursor: pointer;
       display: flex;
       height: 40px;
@@ -28,7 +31,11 @@
       @media (min-width: $breakpoint-tablet-horizontal) {
         &:hover,
         &:focus {
-          background-color: $color-accent;
+          background-color: $black;
+
+          .feather {
+            color: $white;
+          }
         }
       }
 
@@ -46,7 +53,7 @@
       }
 
       .feather {
-        color: $color-background;
+        color: $black;
         height: auto;
         top: 0;
         width: 80%;

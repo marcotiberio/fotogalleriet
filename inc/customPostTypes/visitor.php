@@ -11,10 +11,10 @@ namespace Flynt\CustomPostTypes;
 function registerVisitorPostType()
 {
     $labels = [
-        'name'                  => _x('Visitors', 'Post Type General Name', 'flynt'),
-        'singular_name'         => _x('Visitor', 'Post Type Singular Name', 'flynt'),
-        'menu_name'             => __('Visitors', 'flynt'),
-        'name_admin_bar'        => __('Visitor', 'flynt'),
+        'name'                  => _x('Experts', 'Post Type General Name', 'flynt'),
+        'singular_name'         => _x('Expert', 'Post Type Singular Name', 'flynt'),
+        'menu_name'             => __('Experts', 'flynt'),
+        'name_admin_bar'        => __('Expert', 'flynt'),
         'archives'              => __('Item Archives', 'flynt'),
         'attributes'            => __('Item Attributes', 'flynt'),
         'parent_item_colon'     => __('Parent Item:', 'flynt'),
@@ -40,8 +40,8 @@ function registerVisitorPostType()
         'filter_items_list'     => __('Filter items list', 'flynt'),
     ];
     $args = [
-        'label'                 => __('Visitor', 'flynt'),
-        'description'           => __('Visitor Description', 'flynt'),
+        'label'                 => __('Expert', 'flynt'),
+        'description'           => __('Expert Description', 'flynt'),
         'labels'                => $labels,
         'supports'              => ['title', 'thumbnail'],
         'taxonomies'            => ['category', 'post_tag'],

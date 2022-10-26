@@ -1,8 +1,11 @@
 import $ from 'jquery'
 import 'core-js/es/number'
-// import fullpage from 'fullpage.js'
+import Swiper, { Navigation, A11y, Autoplay } from 'swiper/swiper.esm'
+import 'swiper/swiper-bundle.css'
 
-class OnlineExhibition extends window.HTMLDivElement {
+Swiper.use([Navigation, A11y, Autoplay])
+
+class SliderImages extends window.HTMLDivElement {
   constructor (...args) {
     const self = super(...args)
     self.init()
@@ -47,7 +50,8 @@ class OnlineExhibition extends window.HTMLDivElement {
         delay: options.autoplaySpeed
       }
     }
+    this.slider = new Swiper(this.$slider.get(0), config)
   }
 }
 
-window.customElements.define('flynt-online-exhibition', OnlineExhibition, { extends: 'div' })
+window.customElements.define('flynt-slider-images', SliderImages, { extends: 'div' })

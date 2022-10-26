@@ -1,4 +1,8 @@
-.searchForm {  
+.searchForm {
+  @media (max-width: $breakpoint-desktop - 1) {
+    display: none;
+  }
+
   &-field {
     align-items: center;
     background-color: transparent;

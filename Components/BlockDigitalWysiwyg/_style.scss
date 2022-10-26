@@ -1,0 +1,28 @@
+[is='flynt-block-digital-wysiwyg'] {
+  align-items: center;
+  border-bottom: 2px solid $black;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: $component-spacing-desktop;
+  width: 100vw;
+
+  // &:not(:last-child) {
+  //   border-bottom: 2px solid $black;
+  // }
+
+  @media (min-width: $breakpoint-desktop) {
+    min-height: 60vh;
+    padding: $component-spacing-desktop $component-spacing-desktop*3;
+  }
+  
+  .content {
+    @include reset-content-margins;
+    text-align: inherit;
+
+    > :last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

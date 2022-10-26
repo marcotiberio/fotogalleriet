@@ -23,7 +23,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'name' => 'subtitle',
                 'type' => 'text',
                 'wrapper' => [
-                    'width' => '25',
+                    'width' => '33',
                 ]
             ],
             [
@@ -31,15 +31,24 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'name' => 'postType',
                 'type' => 'text',
                 'wrapper' => [
-                    'width' => '25',
+                    'width' => '33',
                 ]
+            ],
+            [
+                'label' => __('Location', 'flynt'),
+                'name' => 'postLocation',
+                'type' => 'link',
+                'return_format' => 'array',
+                'wrapper' => [
+                    'width' => '33',
+                ],
             ],
             [
                 'label' => __('Date', 'flynt'),
                 'name' => 'postDate',
                 'type' => 'date_picker',
                 'wrapper' => [
-                    'width' => '25',
+                    'width' => '50',
                 ],
             ],
             [
@@ -47,9 +56,18 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'name' => 'postTime',
                 'type' => 'time_picker',
                 'wrapper' => [
-                    'width' => '25',
+                    'width' => '50',
                 ],
-            ]
+            ],
+            [
+                'label' => __('Register Button', 'flynt'),
+                'name' => 'postRegisterbutton',
+                'type' => 'link',
+                'return_format' => 'array',
+                'wrapper' => [
+                    'width' => '100',
+                ],
+            ],
         ],
         'location' => [
             [
@@ -74,10 +92,12 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\GridImageGallery\getACFLayout(),
                     Components\GridImageText\getACFLayout(),
+                    Components\BlockEventInfoContent\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockQaSidebar\getACFLayout(),
                     Components\BlockSpacer\getACFLayout(),
+                    Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\BlockWysiwygSidebar\getACFLayout(),
                     // Components\BlockSliderBanner\getACFLayout(),

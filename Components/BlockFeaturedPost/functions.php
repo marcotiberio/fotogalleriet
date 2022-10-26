@@ -30,7 +30,7 @@ function getACFLayout()
                 'post_type' => [
                     'post',
                     'exhibition',
-                    'page'
+                    'onlinexhibition'
                 ],
                 'allow_null' => 0,
                 'multiple' => 0,

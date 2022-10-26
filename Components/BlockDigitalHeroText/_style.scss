@@ -1,0 +1,71 @@
+[is='flynt-block-digital-hero-text'] {
+  align-items: center;
+  background-color: $black;
+  display: flex;
+  flex-flow: column wrap;
+  height: auto;
+  justify-content: center;
+  padding: $component-spacing-desktop;
+
+  @media (min-width: $breakpoint-desktop) {
+    height: 100vh;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .text {
+    color: $white;
+    font-size: 4rem;
+    line-height: 1;
+    // margin-bottom: 1.5rem;
+    // padding-top: 2rem;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint-mobile-horizontal) {
+      font-size: 10rem;
+    }
+  }
+
+  .linklink {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 400;
+    line-height: inherit;
+    margin-top: $component-spacing-desktop*2;
+    padding: 20px 20px 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    user-select: none;
+
+    &:disabled,
+    &--disabled {
+      cursor: default;
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      border-color: $white;
+
+      h2 {
+        color: $black;
+      }
+    }
+
+    h2 {
+      color: $white;
+    }
+  }
+}

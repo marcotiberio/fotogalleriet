@@ -1,11 +1,11 @@
 <?php
 
-namespace Flynt\Components\OnlineExhibition;
+namespace Flynt\Components\SliderImagesDigital;
 
 use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 
-add_filter('Flynt/addComponentData?name=OnlineExhibition', function ($data) {
+add_filter('Flynt/addComponentData?name=SliderImagesDigital', function ($data) {
     $translatableOptions = Options::getTranslatable('SliderOptions');
     $data['jsonData'] = [
         'options' => array_merge($translatableOptions, $data['options']),
@@ -16,8 +16,8 @@ add_filter('Flynt/addComponentData?name=OnlineExhibition', function ($data) {
 function getACFLayout()
 {
     return [
-        'name' => 'OnlineExhibition',
-        'label' => 'Slider: Images',
+        'name' => 'sliderImagesDigital',
+        'label' => 'Online Exhibition: Slider Images',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),

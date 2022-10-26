@@ -1,0 +1,16 @@
+<div class="flyntComponent componentSpacing" is="flynt-block-event-info-content">
+  <div class="container">
+    <div class="contentWrapper">
+      <div class="sidebar">
+        <span class="type h3">{{ post.postType }}</span>
+        {% if post.postDate %}<span class="date h3">{{ post.postDate|date("d.m.Y") }}</span>{% endif %}
+        {% if post.postTime %}<span class="time h3">{{ post.postTime|date("g:i a") }}</span>{% endif %}
+        {% if post.postLocation %}<a class="location h3" href="{{ post.postLocation.url }}" target="_blank">{{ post.postLocation.title|e }}</a>{% endif %}
+        {% if post.postRegisterbutton %}<a class="register button--ghost h3" href="{{ post.postRegisterbutton.url }}" target="_blank">{{ post.postRegisterbutton.title|e }}</a>{% endif %}
+      </div>
+      <div class="content">
+        {{ contentHtml|e('wp_kses_post') }}
+      </div>
+    </div>
+  </div>
+</div>

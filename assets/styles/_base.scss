@@ -326,9 +326,10 @@ button {
 
   &--ghost {
     background-color: transparent;
-    border-color: $black;
+    border: 1px solid $black;
     border-radius: 5rem;
     color: $black;
+    padding: 15px 20px 10px;
 
     &:hover,
     &:focus {
@@ -608,7 +609,7 @@ select {
   flex: 1 0 auto;
 
   @media (min-width: $breakpoint-tablet-horizontal) {
-    margin-top: 155px;
+    margin-top: 170px;
   }
 }
 
@@ -759,16 +760,6 @@ select {
         @media (min-width: $breakpoint-desktop) {
           padding: $component-spacing-desktop/2 0;
         }
-      }
-    }
-
-    > .componentSpacing {
-      &:first-child {
-        margin-top: 0;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
       }
     }
   }

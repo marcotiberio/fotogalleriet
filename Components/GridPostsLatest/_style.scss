@@ -101,6 +101,7 @@
         column-gap: 10%;
         display: grid;
         grid-template-columns: 70% 20%;
+        text-transform: uppercase;
 
         @media (max-width: $breakpoint-mobile-horizontal) {
           grid-template-columns: 60% 30%;

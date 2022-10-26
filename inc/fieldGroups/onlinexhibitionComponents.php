@@ -19,11 +19,58 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'endpoint' => 0
             ],
             [
+                'label' => __('Exhibition Info', 'flynt'),
+                'name' => 'infoTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0
+            ],
+            [
                 'label' => __('Artist', 'flynt'),
-                'name' => 'artist',
+                'name' => 'subtitle',
                 'type' => 'text',
                 'wrapper' => [
-                    'width' => '100',
+                    'width' => '33',
+                ]
+            ],
+            [
+                'label' => __('Event Type', 'flynt'),
+                'name' => 'postType',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => '33',
+                ]
+            ],
+            [
+                'label' => __('Date Start', 'flynt'),
+                'name' => 'postDate',
+                'type' => 'date_picker',
+                'wrapper' => [
+                    'width' => '33',
+                ],
+            ],
+            [
+                'label' => __('Date End', 'flynt'),
+                'name' => 'postDateEnd',
+                'type' => 'date_picker',
+                'wrapper' => [
+                    'width' => '33',
+                ],
+            ],
+            [
+                'label' => __('Time', 'flynt'),
+                'name' => 'postTime',
+                'type' => 'time_picker',
+                'wrapper' => [
+                    'width' => '33',
+                ],
+            ],
+            [
+                'label' => __('Background Color', 'flynt'),
+                'name' => 'backgroundColor',
+                'type' => 'color_picker',
+                'wrapper' => [
+                    'width' => '33',
                 ]
             ]
         ],
@@ -43,21 +90,18 @@ add_action('Flynt/afterRegisterComponents', function () {
         'style' => 'seamless',
         'fields' => [
             [
-                'name' => 'exhibitionComponents',
-                'label' => __('Exhibition Components', 'flynt'),
+                'name' => 'onlinexhibitionComponents',
+                'label' => __('Online Exhibition Components', 'flynt'),
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
-                    // Components\GridImageGallery\getACFLayout(),
-                    // Components\GridImageText\getACFLayout(),
-                    // Components\BlockImage\getACFLayout(),
-                    // Components\BlockImageText\getACFLayout(),
-                    // Components\BlockQaSidebar\getACFLayout(),
-                    // Components\BlockSpacer\getACFLayout(),
-                    Components\BlockWysiwyg\getACFLayout(),
-                    // Components\BlockWysiwygSidebar\getACFLayout(),
-                    // Components\BlockSliderBanner\getACFLayout(),
-                    // Components\SliderImagesCentered\getACFLayout(),
+                    Components\BlockDigitalHeroImage\getACFLayout(),
+                    Components\BlockDigitalHeroText\getACFLayout(),
+                    Components\BlockDigitalImageText\getACFLayout(),
+                    Components\BlockDigitalVideoOembed\getACFLayout(),
+                    Components\BlockDigitalWysiwyg\getACFLayout(),
+                    Components\SliderImages\getACFLayout(),
+                    Components\SliderImagesDigital\getACFLayout(),
                 ],
             ],
         ],

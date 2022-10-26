@@ -1,0 +1,29 @@
+[is='flynt-block-digital-video-oembed'] {
+  @import 'Partials/video';
+
+  width: 100vw;
+
+  // &.flyntComponent--sizeSmall {
+  //   .video {
+  //     max-width: 375px;
+  //   }
+  // }
+
+  // &.flyntComponent--sizeMedium {
+  //   .video {
+  //     max-width: $content-max-width;
+  //   }
+  // }
+
+  // &.flyntComponent--sizeLarge {
+  //   .video {
+  //     max-width: 800px;
+  //   }
+  // }
+
+  // &.flyntComponent--sizeFull {
+  //   .figure-caption {
+  //     margin-left: 0.625rem;
+  //   }
+  // }
+}

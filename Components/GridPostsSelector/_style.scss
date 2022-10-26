@@ -46,7 +46,7 @@
       flex-flow: row wrap;
       justify-content: flex-start;
       margin: 0 0 0 ($gap * -1);
-      padding: $padding-desktop;
+      padding: 0;
 
       @media (max-width: $breakpoint-mobile-horizontal) {
         padding: $padding-mobile;
@@ -84,9 +84,13 @@
   }
 
   .grid-item {
-    flex-grow: 1;
-    padding: $gap 0 0 $gap;
+    flex-grow: 0;
+    padding: $gap 0 $gap*2 $gap;
     width: 100%;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      padding: 0 0 $gap*2 0;
+    }
 
     a {
       text-decoration: none;
@@ -99,6 +103,7 @@
       height: 100%;
 
       &-image {
+        aspect-ratio: 3/2;
         border: 2px solid $black;
         height: fit-content;
         object-fit: cover;
@@ -126,12 +131,12 @@
               margin-right: $padding-mobile / 2;
             }
 
-            span:last-child {
-              &::before {
-                content: '|';
-                margin-right: $padding-mobile / 2;
-              }
-            }
+            // span:last-child {
+            //   &::before {
+            //     content: '|';
+            //     margin-right: $padding-mobile / 2;
+            //   }
+            // }
           }
 
           hr {
@@ -146,6 +151,10 @@
           flex-flow: column wrap;
           justify-content: space-between;
           margin-top: $padding-mobile;
+
+          @media (max-width: $breakpoint-mobile-horizontal) {
+            margin-top: $padding-mobile/2;
+          }
 
           h3 {
             margin-bottom: $padding-mobile/3;
