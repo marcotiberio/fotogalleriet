@@ -23,10 +23,20 @@ function getACFLayout()
                 'type' => 'text'
             ],
             [
-                'label' => __('Link', 'flynt'),
-                'name' => 'linklink',
-                'type' => 'link',
-                'return_format' => 'array'
+                'label' => __('Buttons', 'flynt'),
+                'name' => 'buttonPanels',
+                'type' => 'repeater',
+                'layout' => 'row',
+                'min' => 1,
+                'button_label' => __('Add Button', 'flynt'),
+                'sub_fields' => [
+                    [
+                        'label' => __('Link', 'flynt'),
+                        'name' => 'linklink',
+                        'type' => 'link',
+                        'return_format' => 'array'
+                    ],
+                ],
             ],
         ]
     ];

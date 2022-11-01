@@ -9,7 +9,7 @@
     position: relative;
 
     .cover {
-      height: 80vh;
+      height: calc(100vh - 185px);
 
       img {
         height: 100%;

@@ -1,7 +1,8 @@
 <div class="container-inner container-inner--right">
   <div class="current-time h4">
-    {{ fn('wp_date', 'H:i') }}
-    <span class="current-time--open sup">Open</span>
-    <span class="current-time--closed sup">Closed</span>
+    <span class="current-time--time">{{ fn('wp_date', 'H:i') }}</span>
+    {# <span class="current-time--open sup">Open</span>
+    <span class="current-time--closed sup">Closed</span> #}
+    <span class="sup" id="openClose">Closed</span>
   </div>
 </div>

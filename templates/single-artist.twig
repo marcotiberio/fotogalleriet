@@ -18,8 +18,8 @@
         {{ renderComponent(component) }}
       {% endfor %}
     </section>
-    <section class="post-related">
+    {# <section class="post-related">
       {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h3>' ~ __('Related Content') ~ '</h3>','taxonomies': post.categories(), 'options': {'theme': 'themeLight', 'columns': 3}}) }}
-    </section>
+    </section> #}
   </article>
 {% endblock %}

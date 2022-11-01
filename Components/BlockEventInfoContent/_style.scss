@@ -47,4 +47,15 @@
       }
     }
   }
+
+  .button--ghost {
+    background-color: $black;
+    color: $white;
+
+    &:focus,
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
 }

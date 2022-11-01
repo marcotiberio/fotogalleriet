@@ -14,7 +14,7 @@
           <h2 class="exhibition-title">{{ item.title }}</h2>
           <h3 class="exhibition-subtitle h3">{{ item.subtitle }}</h3>
           <div class="exhibition-info">
-            {% if item.postType %}<h4 class="exhibition-subtitle">{{ item.postType }}</h4>{% endif %}
+            <h4 class="exhibition-subtitle">{{ item.type.labels.singular_name }}</h4>
             {% if item.postDate %}<h4 class="exhibition-subtitle">{{ item.postDate|date("d.m.Y") }}</h4>{% endif %}
             {% if item.postTime %}<h4 class="exhibition-subtitle">{{ item.postTime|date("g:i a") }}</h4>{% endif %}
             <h4 class="label exhibition-subtitle">Current</h4>

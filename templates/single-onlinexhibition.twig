@@ -5,7 +5,12 @@
     <section class="digital-header" style="background-color: {{ post.backgroundColor }};">
       <h3>{{ post.type.labels.singular_name }}</h3>
       <h1 class="exhibition-title componentSpacing">{{ post.subtitle }}</h1>
-      <h3>{{ post.title }}<h3>
+      <h3>{{ post.title }}</h3>
+      <div class="digital-header--bottom">
+      {% if post.postDate %}<h4 class="exhibition-subtitle">{{ post.postDate|date("d.m.Y") }}</h4>{% endif %}
+      <h3>↓</h3>
+      {% if post.postType %}<h4 class="exhibition-subtitle">{{ post.postType }}</h4>{% endif %} 
+      </div>
     </section>
     <section class="post-main">
       {% for component in post.meta('onlinexhibitionComponents') %}

@@ -97,11 +97,11 @@ function getConfig()
                         'classes' => 'h3',
                         'selector' => '*'
                     ],
-                    // [
-                    //     'title' => 'Heading 4',
-                    //     'classes' => 'h4',
-                    //     'selector' => '*'
-                    // ],
+                    [
+                        'title' => 'Heading 4',
+                        'classes' => 'h4',
+                        'selector' => '*'
+                    ],
                     // [
                     //     'title' => 'Heading 5',
                     //     'classes' => 'h5',
@@ -118,15 +118,15 @@ function getConfig()
                 'title' => 'Buttons',
                 'icon' => '',
                 'items' => [
-                    [
-                        'title' => 'Button',
-                        'classes' => 'button',
-                        'selector' => 'a,button'
-                    ],
+                    // [
+                    //     'title' => 'Button',
+                    //     'classes' => 'button',
+                    //     'selector' => 'a,button'
+                    // ],
                     [
                         'title' => 'Button Ghost',
                         'classes' => 'button--ghost',
-                        'selector' => '.button'
+                        'selector' => 'a,button'
                     ],
                     // [
                     //     'title' => 'Button Small',
@@ -145,7 +145,7 @@ function getConfig()
             'default' => [
                 [
                     'formatselect',
-                    // 'styleselect',
+                    'styleselect',
                     // 'forecolor backcolor',
                     'bold',
                     'italic',
@@ -172,7 +172,7 @@ function getConfig()
             'basic' => [
                 [
                     'formatselect',
-                    // 'styleselect',
+                    'styleselect',
                     // 'forecolor backcolor',
                     'bold',
                     'italic',
